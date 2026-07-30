@@ -1,0 +1,180 @@
+:root {
+  --bg: #eef1f5;
+  --bg-page: #f7f8fa;
+  --bg-soft: #f2f4f7;
+  --panel: #ffffff;
+  --panel-soft: #f7f9fb;
+  --panel-head: #e8edf4;
+  --line: #cfd7e2;
+  --line-strong: #bac5d3;
+  --text: #1f2328;
+  --text-soft: #4f5b6a;
+  --muted: #7c8796;
+  --primary: #2e3a49;
+  --primary-2: #445268;
+  --accent: #5f6b7b;
+  --shadow: 0 2px 8px rgba(31, 35, 40, 0.06);
+  --radius-lg: 12px;
+  --radius-md: 10px;
+  --radius-sm: 8px;
+  --max-width: 1440px;
+  --sidebar-width: 260px;
+  --font: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.6; }
+a { color: var(--primary-2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button, input { font: inherit; }
+.site-shell { max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: var(--sidebar-width) 1fr; min-height: 100vh; background: var(--bg-page); border-left: 1px solid var(--line); border-right: 1px solid var(--line); }
+.sidebar { position: sticky; top: 0; height: 100vh; overflow-y: auto; padding: 16px 14px 24px; border-right: 1px solid var(--line); background: #f2f5f9; }
+.wiki-logo { margin-bottom: 14px; padding: 14px 14px 16px; border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); }
+.wiki-logo small { display: block; margin-bottom: 4px; font-size: 12px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+.wiki-logo h1 { margin: 0; font-size: 25px; line-height: 1.2; color: var(--primary); }
+.wiki-logo p { margin: 8px 0 0; font-size: 13px; color: var(--text-soft); }
+.side-box { margin-bottom: 12px; border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); }
+.side-box h3 { margin: 0; padding: 9px 12px; font-size: 14px; font-weight: 700; color: var(--primary); background: var(--panel-head); border-bottom: 1px solid var(--line); }
+.side-box .box-body { padding: 10px 12px; }
+.side-nav { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.side-nav a { display: block; padding: 4px 0; font-size: 14px; color: var(--text-soft); }
+.side-nav a:hover, .side-nav a.active { color: var(--primary); }
+.content { min-width: 0; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 10px 16px; background: var(--panel); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
+.topbar-left { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.topbar-title { font-size: 14px; color: var(--text-soft); }
+.topbar-actions { display: flex; align-items: flex-start; gap: 10px; flex-wrap: wrap; position: relative; }
+.search-area { position: relative; min-width: 320px; width: 320px; }
+.search-box { display: flex; align-items: center; gap: 8px; width: 100%; padding: 7px 10px; border: 1px solid var(--line); background: var(--bg-page); border-radius: var(--radius-sm); }
+.search-box input { width: 100%; border: 0; outline: none; background: transparent; color: var(--text); }
+.search-dropdown { position: absolute; top: calc(100% + 6px); left: 0; width: 100%; max-height: 420px; overflow-y: auto; border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); display: none; z-index: 50; }
+.search-dropdown.active { display: block; }
+.search-result-item { display: block; padding: 10px 12px; border-bottom: 1px solid #edf1f5; color: inherit; text-decoration: none; }
+.search-result-item:last-child { border-bottom: 0; }
+.search-result-item:hover { background: #fbfcfe; text-decoration: none; }
+.search-result-item strong { display: block; margin-bottom: 2px; font-size: 14px; color: var(--primary); }
+.search-result-meta { font-size: 12px; color: var(--muted); margin-bottom: 3px; }
+.search-result-desc { font-size: 12px; color: var(--text-soft); }
+.search-empty { padding: 12px; color: var(--muted); font-size: 13px; }
+.page-wrap { padding: 18px; }
+.page-title { margin: 0 0 4px; font-size: 30px; line-height: 1.2; color: var(--primary); }
+.page-subtitle { margin: 0 0 18px; font-size: 14px; color: var(--text-soft); }
+.notice-bar { margin-bottom: 18px; padding: 12px 14px; border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); }
+.notice-bar strong { color: var(--primary); }
+.layout-grid { display: grid; grid-template-columns: 1.35fr 0.9fr; gap: 16px; margin-bottom: 18px; }
+.wiki-panel { border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); }
+.wiki-panel h2 { margin: 0; padding: 10px 12px; font-size: 15px; font-weight: 700; color: var(--primary); background: var(--panel-head); border-bottom: 1px solid var(--line); }
+.panel-body { padding: 14px; }
+.summary-text { margin: 0; font-size: 14px; color: var(--text-soft); }
+.summary-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.summary-links a { display: inline-block; padding: 7px 10px; border: 1px solid var(--line); background: var(--panel-soft); color: var(--primary); font-size: 13px; }
+.summary-links a:hover { background: #edf2f7; text-decoration: none; }
+.list-links { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.list-links li { padding-bottom: 8px; border-bottom: 1px solid #edf1f5; }
+.list-links li:last-child { padding-bottom: 0; border-bottom: 0; }
+.list-links a { display: block; font-size: 14px; color: var(--primary-2); }
+.list-links span { display: block; margin-top: 3px; font-size: 12px; color: var(--muted); }
+.entry-panel { margin-bottom: 18px; }
+.entry-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.entry-card { display: block; min-height: 122px; padding: 12px; border: 1px solid var(--line); background: #fff; transition: 0.18s ease; }
+.entry-card:hover { border-color: var(--line-strong); background: #fbfcfe; box-shadow: 0 6px 14px rgba(31, 35, 40, 0.05); text-decoration: none; }
+.entry-card strong { display: block; margin-bottom: 8px; font-size: 15px; color: var(--primary); }
+.entry-card p { margin: 0; font-size: 13px; color: var(--text-soft); }
+.two-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 18px; }
+.category-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.category-list li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 9px 10px; border: 1px solid #e3e9f0; background: #fff; font-size: 14px; }
+.category-list span { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.note-box { padding: 14px; border: 1px dashed var(--line-strong); background: #fcfdff; color: var(--text-soft); font-size: 14px; }
+.footer-note { padding: 12px 0 6px; text-align: center; color: var(--muted); font-size: 12px; }
+
+/* === 分類頁 / 條目頁專用 === */
+.page-hero { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 20px; padding: 16px; border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); }
+.page-hero img { width: 100%; max-width: 220px; border: 1px solid var(--line); }
+.hero-info { flex: 1; }
+.hero-info h1 { margin: 0 0 6px; font-size: 26px; color: var(--primary); }
+.hero-info p { margin: 0; font-size: 14px; color: var(--text-soft); }
+.job-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin-bottom: 20px; }
+.job-card { display: block; padding: 14px 10px; border: 1px solid var(--line); background: var(--panel); text-align: center; font-size: 14px; color: var(--primary); transition: 0.15s ease; }
+.job-card:hover { border-color: var(--line-strong); background: #f4f7fb; text-decoration: none; }
+.job-card img { display: block; width: 54px; height: 54px; object-fit: contain; margin: 0 auto 8px; background: #eef1f5; }
+.info-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 16px; }
+.info-table th { background: var(--panel-head); color: var(--primary); font-weight: 600; padding: 8px 12px; text-align: left; border: 1px solid var(--line); }
+.info-table td { padding: 8px 12px; border: 1px solid var(--line); vertical-align: top; background: #fff; }
+.info-table tr:nth-child(even) td { background: #f9fafb; }
+.list-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.list-table th { background: var(--primary); color: #fff; padding: 10px 12px; text-align: left; font-weight: 600; border: 1px solid var(--primary); }
+.list-table td { padding: 9px 12px; border: 1px solid var(--line); vertical-align: middle; background: #fff; }
+.list-table tr:nth-child(even) td { background: #f9fafb; }
+.list-table tr:hover td { background: #f0f4f9; }
+.list-thumb { width: 48px; height: 48px; object-fit: contain; background: #eef1f5; }
+.section-title { margin: 0 0 12px; padding: 8px 12px; font-size: 15px; font-weight: 700; color: var(--primary); background: var(--panel-head); border-left: 4px solid var(--primary-2); border-bottom: 1px solid var(--line); }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 12px; font-weight: 600; background: #e8edf4; color: var(--primary); margin-right: 4px; }
+.back-link { display: inline-block; margin-top: 24px; padding: 7px 14px; border: 1px solid var(--line); background: var(--panel); font-size: 13px; color: var(--text-soft); }
+.back-link:hover { background: #edf2f7; text-decoration: none; }
+.img-placeholder { width: 100%; max-width: 280px; height: 160px; background: #eef1f5; border: 2px dashed var(--line-strong); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 13px; margin-bottom: 14px; }
+
+/* === 生活等級進度 === */
+.level-block { margin-bottom: 20px; padding: 14px; border: 1px solid var(--line); background: var(--panel); }
+.level-block h3 { margin: 0 0 10px; font-size: 15px; color: var(--primary); border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+.level-img { width: 100%; max-width: 200px; height: 120px; background: #eef1f5; border: 2px dashed var(--line-strong); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 12px; margin-bottom: 10px; }
+
+/* === 怪物分頁 tab === */
+.tab-bar { display: flex; gap: 0; border-bottom: 2px solid var(--line); margin-bottom: 18px; }
+.tab-btn { padding: 8px 18px; font-size: 14px; font-weight: 600; color: var(--text-soft); background: none; border: none; border-bottom: 3px solid transparent; cursor: pointer; margin-bottom: -2px; transition: 0.15s; }
+.tab-btn.active { color: var(--primary); border-bottom-color: var(--primary-2); }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.monster-group { margin-bottom: 24px; }
+.monster-group-title { padding: 6px 12px; background: var(--panel-head); border-left: 4px solid var(--primary-2); border: 1px solid var(--line); margin-bottom: 0; font-size: 14px; font-weight: 700; color: var(--primary); }
+.monster-row { display: grid; grid-template-columns: 56px 1fr 1fr 1fr; align-items: center; gap: 0; border: 1px solid var(--line); border-top: none; background: #fff; padding: 10px 12px; font-size: 14px; }
+.monster-row:nth-child(even) { background: #f9fafb; }
+.monster-lv { font-weight: 700; color: var(--muted); font-size: 13px; }
+.monster-name { font-weight: 600; color: var(--primary); }
+.monster-drop, .monster-atk { font-size: 13px; color: var(--text-soft); }
+.monster-row {
+  display: grid;
+  grid-template-columns: 48px 56px 1fr 1fr 1fr;
+  align-items: center;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-top: none;
+  background: #fff;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+.monster-row.monster-header {
+  background: var(--panel-head);
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 13px;
+}
+.monster-row:nth-child(even) { background: #f9fafb; }
+.monster-thumb-col { display: flex; align-items: center; justify-content: center; }
+.monster-thumb {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  background: #eef1f5;
+  border-radius: 4px;
+  display: block;
+}
+@media (max-width: 720px) {
+  .monster-row {
+    grid-template-columns: 40px 44px 1fr 1fr;
+  }
+}
+
+/* === RWD === */
+@media (max-width: 1120px) {
+  .site-shell { grid-template-columns: 1fr; }
+  .sidebar { display: none; }
+  .layout-grid, .two-col, .entry-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .page-wrap { padding: 14px; }
+  .page-title { font-size: 24px; }
+  .search-area { width: 100%; min-width: 100%; }
+  .topbar-left, .topbar-actions { width: 100%; }
+  .topbar { align-items: stretch; }
+  .monster-row { grid-template-columns: 44px 1fr 1fr; }
+}

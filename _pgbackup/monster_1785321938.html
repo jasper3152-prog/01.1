@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>怪物｜星河夢境新手教學指南</title>
+        <link rel="stylesheet" href="assets/css/wiki.css"/>
+    </head>
+    <body>
+        <div class="site-shell">
+            <aside class="sidebar">
+                <div class="wiki-logo">
+                    <small>Wiki Guide</small>
+                    <h1>星河夢境新手教學指南</h1>
+                    <p>怪物列表頁。</p>
+                </div>
+                <section class="side-box">
+                    <h3>分類導覽</h3>
+                    <div class="box-body">
+                        <ul class="side-nav">
+                            <li>
+                                <a href="index.html">首頁</a>
+                            </li>
+                            <li>
+                                <a href="jobs.html">職業</a>
+                            </li>
+                            <li>
+                                <a href="boss.html">Boss</a>
+                            </li>
+                            <li>
+                                <a href="life.html">生活</a>
+                            </li>
+                            <li>
+                                <a href="equipment.html">裝備</a>
+                            </li>
+                            <li>
+                                <a class="active" href="monster.html">怪物</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </aside>
+            <main class="content">
+                <header class="topbar">
+                    <div class="topbar-left">
+                        <div class="topbar-title">Monster / Monster List</div>
+                    </div>
+                </header>
+                <div class="page-wrap">
+                    <h1 class="page-title">怪物</h1>
+                    <p class="page-subtitle">一般怪物 / 副本怪物</p>
+                    <div class="tab-bar">
+                        <button class="tab-btn active" onclick="switchTab('normal',this)">一般怪物</button>
+                        <button class="tab-btn" onclick="switchTab('dungeon',this)">副本怪物</button>
+                    </div>
+                    <!-- 一般怪物 -->
+                    <div id="tab-normal" class="tab-panel active">
+                        <section class="wiki-panel" style="margin-bottom:20px;">
+                            <h2>一般怪物資料</h2>
+                            <div class="panel-body" style="padding:0 0 8px 0;">
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 1 – 3</div>
+                                    <div class="monster-row" id="lv1-crab">
+                                        <span class="monster-lv">LV1</span>
+                                        <span class="monster-name">沙礫螃蟹</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv2-fish-scout">
+                                        <span class="monster-lv">LV2</span>
+                                        <span class="monster-name">魚人斥侯</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv3-lost-ghost-pirate">
+                                        <span class="monster-lv">LV3</span>
+                                        <span class="monster-name">迷失幽靈海盜</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 4 – 6</div>
+                                    <div class="monster-row" id="lv4-thief-stalker">
+                                        <span class="monster-lv">LV4</span>
+                                        <span class="monster-name">盜賊潛行者</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv5-archer-skirmisher">
+                                        <span class="monster-lv">LV5</span>
+                                        <span class="monster-name">弓箭散兵</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv6-raging-axeman">
+                                        <span class="monster-lv">LV6</span>
+                                        <span class="monster-name">狂暴斧手</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 7 – 9</div>
+                                    <div class="monster-row" id="lv7-skeleton-warrior">
+                                        <span class="monster-lv">LV7</span>
+                                        <span class="monster-name">骷髏戰士</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv8-dark-archer">
+                                        <span class="monster-lv">LV8</span>
+                                        <span class="monster-name">黑暗弓手</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv9-cursed-mage">
+                                        <span class="monster-lv">LV9</span>
+                                        <span class="monster-name">詛咒法師</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 10 – 12</div>
+                                    <div class="monster-row" id="lv10-peace-wraith">
+                                        <span class="monster-lv">LV10</span>
+                                        <span class="monster-name">安寧怨靈</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv11-cursed-zombie">
+                                        <span class="monster-lv">LV11</span>
+                                        <span class="monster-name">受詛咒殭屍</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv12-wailing-banshee">
+                                        <span class="monster-lv">LV12</span>
+                                        <span class="monster-name">哀號女妖</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 13 – 15</div>
+                                    <div class="monster-row" id="lv13-fallen-miner">
+                                        <span class="monster-lv">LV13</span>
+                                        <span class="monster-name">墮落礦工</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv14-mine-poison-spider">
+                                        <span class="monster-lv">LV14</span>
+                                        <span class="monster-name">礦坑毒蛛</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv15-mutant-bat">
+                                        <span class="monster-lv">LV15</span>
+                                        <span class="monster-name">變異蝙蝠</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 16 – 18</div>
+                                    <div class="monster-row" id="lv16-flameshadow-sailor">
+                                        <span class="monster-lv">LV16</span>
+                                        <span class="monster-name">炎影水手</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv17-flameshadow-pirate">
+                                        <span class="monster-lv">LV17</span>
+                                        <span class="monster-name">炎影海盜</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv18-flameshadow-warlock">
+                                        <span class="monster-lv">LV18</span>
+                                        <span class="monster-name">炎影術士</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 19 – 21</div>
+                                    <div class="monster-row" id="lv19-shipwreck-skeleton">
+                                        <span class="monster-lv">LV19</span>
+                                        <span class="monster-name">船骸骷髏</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv20-drowned-sailor">
+                                        <span class="monster-lv">LV20</span>
+                                        <span class="monster-name">溺亡水手</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv21-cabin-rat">
+                                        <span class="monster-lv">LV21</span>
+                                        <span class="monster-name">廢船艙鼠</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 22 – 24</div>
+                                    <div class="monster-row" id="lv22-broken-guard">
+                                        <span class="monster-lv">LV22</span>
+                                        <span class="monster-name">殘破守衛</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv23-shadow-wraith">
+                                        <span class="monster-lv">LV23</span>
+                                        <span class="monster-name">暗影怨靈</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv24-cursed-hound">
+                                        <span class="monster-lv">LV24</span>
+                                        <span class="monster-name">詛咒獸犬</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 25 – 27</div>
+                                    <div class="monster-row" id="lv25-zealot">
+                                        <span class="monster-lv">LV25</span>
+                                        <span class="monster-name">狂信教徒</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv26-stone-golem">
+                                        <span class="monster-lv">LV26</span>
+                                        <span class="monster-name">石像魔像</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv27-fire-imp">
+                                        <span class="monster-lv">LV27</span>
+                                        <span class="monster-name">火焰小惡魔</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 28 – 30</div>
+                                    <div class="monster-row" id="lv28-stone-guardian">
+                                        <span class="monster-lv">LV28</span>
+                                        <span class="monster-name">石像守衛</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv29-soulbound-wraith">
+                                        <span class="monster-lv">LV29</span>
+                                        <span class="monster-name">鎮魂怨靈</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv30-lost-acolyte">
+                                        <span class="monster-lv">LV30</span>
+                                        <span class="monster-name">失落的侍僧</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 31 – 33</div>
+                                    <div class="monster-row" id="lv31-radiant-infantry">
+                                        <span class="monster-lv">LV31</span>
+                                        <span class="monster-name">光耀步兵</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv32-broken-bowman">
+                                        <span class="monster-lv">LV32</span>
+                                        <span class="monster-name">破燼弓手</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv33-flame-rite-beast">
+                                        <span class="monster-lv">LV33</span>
+                                        <span class="monster-name">焰咒祭獸</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 34 – 36</div>
+                                    <div class="monster-row" id="lv34-blazing-monk">
+                                        <span class="monster-lv">LV34</span>
+                                        <span class="monster-name">烈焰武僧</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv35-molten-berserker">
+                                        <span class="monster-lv">LV35</span>
+                                        <span class="monster-name">熔鑄戰狂</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv36-ash-priest">
+                                        <span class="monster-lv">LV36</span>
+                                        <span class="monster-name">灰燼祭祀者</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 37 – 39</div>
+                                    <div class="monster-row" id="lv37-wind-paddy-spirit">
+                                        <span class="monster-lv">LV37</span>
+                                        <span class="monster-name">風行稻靈</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv38-rust-rice-armor">
+                                        <span class="monster-lv">LV38</span>
+                                        <span class="monster-name">鏽鐵稻鎧</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv39-wheat-wind-fiend">
+                                        <span class="monster-lv">LV39</span>
+                                        <span class="monster-name">麥風妖</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 40 – 42</div>
+                                    <div class="monster-row" id="lv40-corroded-bone-soldier">
+                                        <span class="monster-lv">LV40</span>
+                                        <span class="monster-name">腐蝕骸兵</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv41-hatefire-phantom">
+                                        <span class="monster-lv">LV41</span>
+                                        <span class="monster-name">怨火幽魂</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv42-grave-golem">
+                                        <span class="monster-lv">LV42</span>
+                                        <span class="monster-name">壯守魔像</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 43 – 45</div>
+                                    <div class="monster-row" id="lv43-fading-light-guard">
+                                        <span class="monster-lv">LV43</span>
+                                        <span class="monster-name">殘光守衛</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv44-vinewalker">
+                                        <span class="monster-lv">LV44</span>
+                                        <span class="monster-name">蔓生行者</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv45-fallen-priest">
+                                        <span class="monster-lv">LV45</span>
+                                        <span class="monster-name">墮天祭司</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 46 – 48</div>
+                                    <div class="monster-row" id="lv46-ice-port-berserker">
+                                        <span class="monster-lv">LV46</span>
+                                        <span class="monster-name">冰港狂戰士</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv47-frostbound-witch">
+                                        <span class="monster-lv">LV47</span>
+                                        <span class="monster-name">霜縛女巫</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv48-ice-hell-wolf">
+                                        <span class="monster-lv">LV48</span>
+                                        <span class="monster-name">獄冰巨狼</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 49 – 51</div>
+                                    <div class="monster-row" id="lv49-icefall-guard">
+                                        <span class="monster-lv">LV49</span>
+                                        <span class="monster-name">冰瀑石衛</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv50-water-sculptor">
+                                        <span class="monster-lv">LV50</span>
+                                        <span class="monster-name">水靈塑師</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv51-frostbound-undead">
+                                        <span class="monster-lv">LV51</span>
+                                        <span class="monster-name">霜縛亡靈</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 52 – 54</div>
+                                    <div class="monster-row" id="lv52-lava-soldier">
+                                        <span class="monster-lv">LV52</span>
+                                        <span class="monster-name">熔岩魔兵</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv53-blood-shaman">
+                                        <span class="monster-lv">LV53</span>
+                                        <span class="monster-name">血獄薩滿</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv54-core-worm">
+                                        <span class="monster-lv">LV54</span>
+                                        <span class="monster-name">蝕核巨蠕</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 55 – 57</div>
+                                    <div class="monster-row" id="lv55-burning-guard">
+                                        <span class="monster-lv">LV55</span>
+                                        <span class="monster-name">灼魂禁衛</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv56-molten-colossus">
+                                        <span class="monster-lv">LV56</span>
+                                        <span class="monster-name">熔心巨像</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv57-curse-priest">
+                                        <span class="monster-lv">LV57</span>
+                                        <span class="monster-name">獄咒祭官</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">LV 58 – 60</div>
+                                    <div class="monster-row" id="lv58-oath-judge">
+                                        <span class="monster-lv">LV58</span>
+                                        <span class="monster-name">烈誓裁決者</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv59-ash-sage">
+                                        <span class="monster-lv">LV59</span>
+                                        <span class="monster-name">灰燼術尊</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row" id="lv60-black-ash-colossus">
+                                        <span class="monster-lv">LV60</span>
+                                        <span class="monster-name">黑燼巨像</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- 副本怪物 -->
+                    <div id="tab-dungeon" class="tab-panel">
+                        <section class="wiki-panel" style="margin-bottom:20px;">
+                            <h2>副本怪物資料</h2>
+                            <div class="panel-body">
+                                <div class="notice-bar" style="margin-bottom:16px;">
+                                    副本怪物資料持續補充中，請提供副本名稱與怪物數值後填入。
+</div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">副本名稱：預留區一</div>
+                                    <div class="monster-row">
+                                        <span class="monster-lv">LV1</span>
+                                        <span class="monster-name">副本怪物名稱</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row">
+                                        <span class="monster-lv">LV2</span>
+                                        <span class="monster-name">副本怪物名稱</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row">
+                                        <span class="monster-lv">LV3</span>
+                                        <span class="monster-name">副本怪物名稱</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">副本名稱：預留區二</div>
+                                    <div class="monster-row">
+                                        <span class="monster-lv">LV1</span>
+                                        <span class="monster-name">副本怪物名稱</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row">
+                                        <span class="monster-lv">LV2</span>
+                                        <span class="monster-name">副本怪物名稱</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row">
+                                        <span class="monster-lv">LV3</span>
+                                        <span class="monster-name">副本怪物名稱</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                                <div class="monster-group">
+                                    <div class="monster-group-title">副本名稱：預留區三</div>
+                                    <div class="monster-row">
+                                        <span class="monster-lv">LV1</span>
+                                        <span class="monster-name">副本怪物名稱</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row">
+                                        <span class="monster-lv">LV2</span>
+                                        <span class="monster-name">副本怪物名稱</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                    <div class="monster-row">
+                                        <span class="monster-lv">LV3</span>
+                                        <span class="monster-name">副本怪物名稱</span>
+                                        <span class="monster-drop">掉落物預留</span>
+                                        <span class="monster-atk">攻擊力預留</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <a class="back-link" href="index.html">← 返回首頁</a>
+                    <div class="footer-note">星河夢境新手教學指南</div>
+                </div>
+            </main>
+        </div>
+        <script>
+function switchTab(tabName, btn) {
+  document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
+  document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+  document.getElementById("tab-" + tabName).classList.add("active");
+  btn.classList.add("active");
+}
+</script>
+    </body>
+</html>

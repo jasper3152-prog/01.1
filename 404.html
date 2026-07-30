@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>找不到頁面｜星河夢境新手教學指南</title>
+        <link rel="stylesheet" href="assets/css/wiki.css"/>
+        <style>
+.error-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: 40px 20px;
+}
+.error-code {
+  font-size: 96px;
+  font-weight: 900;
+  color: #d1d9e0;
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: -4px;
+}
+.error-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.error-desc {
+  font-size: 14px;
+  color: var(--text-soft);
+  margin-bottom: 32px;
+  max-width: 400px;
+  line-height: 1.8;
+}
+.error-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.error-links a {
+  padding: 8px 18px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--primary);
+  font-size: 14px;
+  transition: 0.15s;
+}
+.error-links a:hover {
+  background: #edf2f7;
+  text-decoration: none;
+  border-color: var(--line-strong);
+}
+.error-links a.primary-btn {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+.error-links a.primary-btn:hover {
+  background: var(--primary-2);
+  border-color: var(--primary-2);
+}
+.error-search-wrap {
+  width: 100%;
+  max-width: 420px;
+}
+.error-search-wrap .search-box {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+}
+.error-search-label {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+</style>
+    </head>
+    <body>
+        <div class="site-shell">
+            <aside class="sidebar">
+                <div class="wiki-logo">
+                    <small>Wiki Guide</small>
+                    <h1>星河夢境新手教學指南</h1>
+                    <p>找不到頁面。</p>
+                </div>
+                <section class="side-box">
+                    <h3>分類導覽</h3>
+                    <div class="box-body">
+                        <ul class="side-nav">
+                            <li>
+                                <a href="index.html">首頁</a>
+                            </li>
+                            <li>
+                                <a href="jobs.html">職業</a>
+                            </li>
+                            <li>
+                                <a href="boss.html">Boss</a>
+                            </li>
+                            <li>
+                                <a href="life.html">生活</a>
+                            </li>
+                            <li>
+                                <a href="equipment.html">裝備</a>
+                            </li>
+                            <li>
+                                <a href="monster.html">怪物</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </aside>
+            <main class="content">
+                <header class="topbar">
+                    <div class="topbar-left">
+                        <div class="topbar-title">404 / 找不到頁面</div>
+                    </div>
+                    <div class="topbar-actions">
+                        <div class="search-area">
+                            <div class="search-box">
+                                <span>🔎</span>
+                                <input id="globalSearchInput" type="text" placeholder="搜尋職業、Boss、生活、裝備、怪物..."/>
+                            </div>
+                            <div id="searchResults" class="search-dropdown">
+                                <div class="search-empty">請輸入關鍵字開始搜尋。</div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="page-wrap">
+                    <div class="error-wrap">
+                        <div class="error-code">404</div>
+                        <div class="error-title">找不到這個頁面</div>
+                        <p class="error-desc">
+          你要找的頁面可能還沒建立、已經移動位置，或是連結有誤。<br/>
+          可以試試搜尋，或從下方直接跳到你要的分類。 </p>
+                        <div class="error-search-wrap">
+                            <div class="error-search-label">試試搜尋看看</div>
+                            <div class="search-box" style="margin-bottom:24px;">
+                                <span>🔎</span>
+                                <input id="inlineSearchInput" type="text" placeholder="輸入職業、Boss、裝備名稱..."/>
+                            </div>
+                            <div id="inlineSearchResults" class="search-dropdown" style="position:static;display:none;margin-bottom:24px;"></div>
+                        </div>
+                        <div class="error-links">
+                            <a class="primary-btn" href="index.html">← 回到首頁</a>
+                            <a href="jobs.html">職業</a>
+                            <a href="boss.html">Boss</a>
+                            <a href="life.html">生活</a>
+                            <a href="equipment.html">裝備</a>
+                            <a href="monster.html">怪物</a>
+                        </div>
+                    </div>
+                    <div class="footer-note">星河夢境新手教學指南</div>
+                </div>
+            </main>
+        </div>
+        <script src="assets/js/search-data.js"></script>
+        <script src="assets/js/search.js"></script>
+        <script>
+// 頂部搜尋列（topbar）
+// search.js 已處理 globalSearchInput，不需要重複
+
+// 頁面中間的內嵌搜尋
+const inlineInput = document.getElementById("inlineSearchInput");
+const inlineResults = document.getElementById("inlineSearchResults");
+
+inlineInput.addEventListener("input", (e) => {
+  const value = e.target.value.trim().toLowerCase();
+  inlineResults.innerHTML = "";
+
+  if (!value) {
+    inlineResults.style.display = "none";
+    return;
+  }
+
+  const filtered = searchData.filter(item =>
+    item.name.toLowerCase().includes(value) ||
+    item.category.toLowerCase().includes(value)
+  );
+
+  if (!filtered.length) {
+    inlineResults.style.display = "block";
+    inlineResults.innerHTML = '<div class="search-empty">沒有找到符合的條目。</div>';
+    return;
+  }
+
+  inlineResults.style.display = "block";
+  filtered.forEach(item => {
+    const a = document.createElement("a");
+    a.className = "search-result-item";
+    a.href = item.url;
+    a.innerHTML = `
+      <strong>${item.name}</strong>
+      <div class="search-result-meta">${item.category}</div>
+      <div class="search-result-desc">${item.desc}</div>
+    `;
+    inlineResults.appendChild(a);
+  });
+});
+</script>
+    </body>
+</html>

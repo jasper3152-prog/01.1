@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>裝備｜星河夢境新手教學指南</title>
+        <meta name="description" content="星河夢境新手教學指南裝備列表頁。"/>
+        <style>:root { --bg: #eef1f5; --bg-page: #f7f8fa; --panel: #ffffff; --panel-soft: #f7f9fb; --panel-head: #e8edf4; --line: #cfd7e2; --line-strong: #bac5d3; --text: #1f2328; --text-soft: #4f5b6a; --muted: #7c8796; --primary: #2e3a49; --primary-2: #445268; --shadow: 0 2px 8px rgba(31, 35, 40, 0.06); --max-width: 1440px; --sidebar-width: 260px; --font: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif; } * { box-sizing: border-box; } body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.6; } a { color: var(--primary-2); text-decoration: none; } a:hover { text-decoration: underline; } .site-shell { max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: var(--sidebar-width) 1fr; min-height: 100vh; background: var(--bg-page); border-left: 1px solid var(--line); border-right: 1px solid var(--line); } .sidebar { position: sticky; top: 0; height: 100vh; overflow-y: auto; padding: 16px 14px 24px; border-right: 1px solid var(--line); background: #f2f5f9; } .wiki-logo { margin-bottom: 14px; padding: 14px 14px 16px; border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); } .wiki-logo small { display: block; margin-bottom: 4px; font-size: 12px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; } .wiki-logo h1 { margin: 0; font-size: 24px; line-height: 1.2; color: var(--primary); } .wiki-logo p { margin: 8px 0 0; font-size: 13px; color: var(--text-soft); } .side-box { margin-bottom: 12px; border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); } .side-box h3 { margin: 0; padding: 9px 12px; font-size: 14px; font-weight: 700; color: var(--primary); background: var(--panel-head); border-bottom: 1px solid var(--line); } .side-box .box-body { padding: 10px 12px; } .side-nav { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; } .side-nav a { display: block; padding: 4px 0; font-size: 14px; color: var(--text-soft); } .side-nav a.active, .side-nav a:hover { color: var(--primary); } .content { min-width: 0; } .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 10px 16px; background: var(--panel); border-bottom: 1px solid var(--line); } .topbar-title { font-size: 14px; color: var(--text-soft); } .page-wrap { padding: 18px; } .page-title { margin: 0 0 4px; font-size: 30px; line-height: 1.2; color: var(--primary); } .page-subtitle { margin: 0 0 18px; font-size: 14px; color: var(--text-soft); } .wiki-panel { border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); margin-bottom: 18px; } .wiki-panel h2 { margin: 0; padding: 10px 12px; font-size: 15px; font-weight: 700; color: var(--primary); background: var(--panel-head); border-bottom: 1px solid var(--line); } .panel-body { padding: 14px; } .list-header { display: grid; grid-template-columns: 72px 1.4fr 1fr 1fr; gap: 12px; padding: 10px 12px; border: 1px solid var(--line); background: var(--panel-head); font-size: 13px; font-weight: 700; color: var(--primary); margin-bottom: 10px; } .equipment-list { display: grid; gap: 10px; } .equipment-row-link { display: block; color: inherit; text-decoration: none; } .equipment-row-link:hover { text-decoration: none; } .equipment-row { display: grid; grid-template-columns: 72px 1.4fr 1fr 1fr; gap: 12px; align-items: center; padding: 10px 12px; border: 1px solid var(--line); background: #fff; transition: 0.18s ease; } .equipment-row-link:hover .equipment-row { border-color: var(--line-strong); background: #fbfcfe; box-shadow: 0 6px 14px rgba(31, 35, 40, 0.05); } .equipment-image { width: 54px; height: 54px; border: 1px solid var(--line); background: #fff; display: flex; align-items: center; justify-content: center; padding: 4px; } .equipment-image img { width: 54px; height: 54px; object-fit: contain; display: block; } .equipment-name strong { display: block; font-size: 15px; color: var(--primary); margin-bottom: 2px; } .equipment-type strong, .equipment-source strong { display: block; font-size: 14px; color: var(--text); margin-bottom: 2px; } .equipment-type span, .equipment-source span { display: block; font-size: 13px; color: var(--text-soft); } .back-link { display: inline-block; margin-top: 8px; font-size: 14px; } @media (max-width: 1120px) { .site-shell {  grid-template-columns: 1fr; }  .sidebar {  display: none; } } @media (max-width: 840px) { .list-header {  display: none; }  .equipment-row {  grid-template-columns: 72px 1fr; }  .equipment-type, .equipment-source {  grid-column: 2 / 3; } } @media (max-width: 560px) { .page-wrap {  padding: 14px; }  .page-title {  font-size: 24px; } }</style>
+        <link href="tailwind_theme/tailwind.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="site-shell">
+            <aside class="sidebar">
+                <div class="wiki-logo">
+                    <small>Wiki Guide</small>
+                    <h1>星河夢境新手教學指南</h1>
+                    <p>裝備列表頁。</p>
+                </div>
+                <section class="side-box">
+                    <h3>分類導覽</h3>
+                    <div class="box-body">
+                        <ul class="side-nav">
+                            <li>
+                                <a href="index.html">首頁</a>
+                            </li>
+                            <li>
+                                <a href="jobs.html">職業</a>
+                            </li>
+                            <li>
+                                <a href="boss.html">Boss</a>
+                            </li>
+                            <li>
+                                <a href="life.html">生活</a>
+                            </li>
+                            <li>
+                                <a class="active" href="equipment.html">裝備</a>
+                            </li>
+                            <li>
+                                <a href="monster.html">怪物</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </aside>
+            <main class="content">
+                <header class="topbar">
+                    <div class="topbar-title">裝備 / Equipment</div>
+                </header>
+                <div class="page-wrap">
+                    <h1 class="page-title">裝備</h1>
+                    <p class="page-subtitle">裝備列表入口頁</p>
+                    <section class="wiki-panel">
+                        <h2>裝備列表</h2>
+                        <div class="panel-body">
+                            <div class="list-header">
+                                <div>圖片</div>
+                                <div>裝備名稱</div>
+                                <div>類型 / 分類</div>
+                                <div>來源 / 備註</div>
+                            </div>
+                            <div class="equipment-list">
+                                <a class="equipment-row-link" href="equipment/oklas-ocean-ring.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/oklas-ocean-ring.png" alt="奧克拉斯的海洋戒指">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>奧克拉斯的海洋戒指</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>飾品 / 戒指</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>Boss 掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/tidetrace-chain.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/tidetrace-chain.png" alt="潮痕疾掠之鏈">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>潮痕疾掠之鏈</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>飾品</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>Boss 掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/ancient-sea-rod.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/ancient-sea-rod.png" alt="遠古大海祝福釣竿">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>遠古大海祝福釣竿</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>工具 / 釣竿</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>Boss 掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/frostmark-gloves.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/frostmark-gloves.png" alt="寒霜冰紋之手套">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>寒霜冰紋之手套</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>防具 / 手套</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>Boss 掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/fortress-armor.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/fortress-armor.png" alt="堡壘守護者的鐵甲">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>堡壘守護者的鐵甲</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>防具 / 胸甲</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>Boss 掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/forgotten-staff.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/forgotten-staff.png" alt="守護者的遺忘法杖">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>守護者的遺忘法杖</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>武器 / 法杖</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>Boss 掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/sleeper-beast-hat.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/sleeper-beast-hat.png" alt="沉睡的嗅探獸帽子">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>沉睡的嗅探獸帽子</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>防具 / 帽子</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>Boss 掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/ghostfire-backpiece.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="assets/images/equipment/example.png" alt="幽靈之火-幽靈之背飾">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>幽靈之火-幽靈之背飾</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>背飾 / 披風</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>Boss 掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/octavia-shortbow.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="assets/images/equipment/example.png" alt="奧客塔維亞的短弓">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>奧客塔維亞的短弓</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>武器 / 短弓</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>Boss 掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/wills-flame-staff.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="assets/images/equipment/example.png" alt="威爾斯的烈焰法杖">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>威爾斯的烈焰法杖</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>武器 / 法杖</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>Boss 掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/standiras-steel-sword.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="assets/images/equipment/example.png" alt="史丹提拉斯的鋼鐵長劍">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>史丹提拉斯的鋼鐵長劍</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>武器 / 長劍</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>Boss 掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/angros-steady-boots.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/angros-steady-boots.png" alt="安格羅斯的穩重之靴">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>安格羅斯的穩重之靴</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>防具 / 鞋子</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>Boss 掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/oceanheart-element.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="assets/images/equipment/example.png" alt="海洋之心-海豚的元素之力">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>海洋之心-海豚的元素之力</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>特殊裝備</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>Boss 掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/dolphin-rod.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="assets/images/equipment/example.png" alt="海豚釣竿">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>海豚釣竿</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>工具 / 釣竿</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>Boss 掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/warwound-lance.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="assets/images/equipment/example.png" alt="戰傷之掠奪獸長槍">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>戰傷之掠奪獸長槍</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>武器 / 長槍</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>Boss 掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/black-vein-ring.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/black-vein-ring.png" alt="黑脈戒指">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>黑脈戒指</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>飾品 / 戒指</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>生活掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/copper-caster-bracelet.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/copper-caster-bracelet.png" alt="煉銅術士手鐲">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>煉銅術士手鐲</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>飾品 / 手鐲</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>生活掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/steelheart.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/steelheart.png"/>
+                                            <img src="assets/images/equipment/example.png" alt="鋼鐵之心">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>鋼鐵之心</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>特殊裝備</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>生活掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/oak-bracelet.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/oak-bracelet.png" alt="橡木手鐲">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>橡木手鐲</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>飾品 / 手鐲</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>生活掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/pure-white-hand.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/pure-white-hand.png" alt="魔法師的純白之手">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>魔法師的純白之手</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>防具 / 手部</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>生活掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/frozen-ice-element.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/frozen-ice-element.png" alt="極凍的寒冰元素之力">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>極凍的寒冰元素之力</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>特殊裝備</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>生活掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/ragged-clothes.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/ragged-clothes.png" alt="破爛衣服">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>破爛衣服</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>防具 / 衣服</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>生活掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/sky-omen-stone.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/sky-omen-stone.png" alt="蒼天垂象之石">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>蒼天垂象之石</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>特殊裝備</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>生活掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/amber-of-life.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/amber-of-life.png" alt="萬物化生之珀">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>萬物化生之珀</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>特殊裝備</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>生活掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/blood-and-tears-cloak.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/blood-and-tears-cloak.png" alt="血與淚之披風">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>血與淚之披風</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>防具 / 披風</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>生活掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/dreamheart-of-galaxy.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202026-07-15%20191240.png" alt="遠眺銀河的夢境之心">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>遠眺銀河的夢境之心</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>特殊裝備</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>生活掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/dark-caster-hand.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/wild-bear-hand.png" alt="邪靈術士的魔法之手">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>邪靈術士的魔法之手</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>防具 / 手部</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>生活掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/wild-bear-hand.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/dark-caster-hand.png" alt="狂野怒熊之手">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>狂野怒熊之手</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>防具 / 手部</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>生活掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/ruby-fate-belt.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/rigid-edge.png" alt="極致的命運紅玉腰帶">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>極致的命運紅玉腰帶</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>防具 / 腰帶</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>生活掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/duckfeather-quiver.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/duckfeather-quiver.png" alt="鴨羽的穿心箭袋">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>鴨羽的穿心箭袋</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>防具 / 箭袋</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>生活掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/golden-coast-heart.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="assets/images/equipment/example.png" alt="金沙沿岸之心">
+                                            <img src="image/equ/golden-coast-heart.png"/>
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>金沙沿岸之心</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>特殊裝備</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>小怪掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/thiefs-ambition.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/thiefs-ambition.png" alt="盜賊的野心-奔馳疾走">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>盜賊的野心-奔馳疾走</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>特殊裝備</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>小怪掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/soul-sword.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/soul-sword.png" alt="安祥者的靈魂之劍">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>安祥者的靈魂之劍</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>武器 / 劍</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>小怪掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/rigid-edge.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202026-07-15%20191017.png" alt="一板一眼">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>一板一眼</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>武器</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>小怪掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/sailor-shadow-gloves.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="assets/images/equipment/example.png" alt="水手的影焰手套">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>水手的影焰手套</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>防具 / 手套</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>小怪掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/pirate-shadow-bow.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="assets/images/equipment/example.png" alt="海盜的影焰長弓">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>海盜的影焰長弓</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>武器 / 長弓</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>小怪掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/chaos-cocoon-blade.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="assets/images/equipment/example.png" alt="混沌蛛織者的繭刃">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>混沌蛛織者的繭刃</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>武器 / 刃</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>小怪掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/broken-life-breath.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/broken-life-breath.png" alt="殘破的生靈之息">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>殘破的生靈之息</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>特殊裝備</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>小怪掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/mutant-golem-heart.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="image/equ/mutant-golem-heart.png" alt="變異的石像之心">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>變異的石像之心</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>特殊裝備</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>小怪掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/radiant-helm.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="assets/images/equipment/example.png" alt="輝煌的光芒綻放頭盔">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>輝煌的光芒綻放頭盔</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>防具 / 頭盔</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>小怪掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/acolyte-greaves.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="assets/images/equipment/example.png" alt="侍僧的狂熱者護腿">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>侍僧的狂熱者護腿</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>防具 / 護腿</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>小怪掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/wind-legacy-ring.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="assets/images/equipment/example.png" alt="風能傳承之戒">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>風能傳承之戒</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>飾品 / 戒指</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>小怪掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/holy-light-jewel.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="assets/images/equipment/example.png" alt="淨化的聖光珠寶">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>淨化的聖光珠寶</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>飾品 / 珠寶</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>來源</strong>
+                                            <span>小怪掉落</span>
+                                        </div>
+                                    </div></a>
+                                <a class="equipment-row-link" href="equipment/corrosion-curse-necklace.html"><div class="equipment-row">
+                                        <div class="equipment-image">
+                                            <img src="assets/images/equipment/example.png" alt="腐蝕之毒詛咒項鍊">
+                                        </div>
+                                        <div class="equipment-name">
+                                            <strong>腐蝕之毒詛咒項鍊</strong>
+                                        </div>
+                                        <div class="equipment-type">
+                                            <strong>類型</strong>
+                                            <span>飾品 / 項鍊</span>
+                                        </div>
+                                        <div class="equipment-source">
+                                            <strong>
+                                  來源</strong>
+                                            <span>小怪掉落</span>
+                                        </div>
+                                    </div></a>
+                            </div>
+                            <a class="back-link" href="index.html">← 返回首頁</a>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

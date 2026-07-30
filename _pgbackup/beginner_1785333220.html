@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>新手入門｜星河夢境新手教學指南</title>
+        <link rel="stylesheet" href="assets/css/wiki.css"/>
+        <style>
+.guide-tab-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.guide-tab-btn {
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-soft);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+.guide-tab-btn:hover {
+  background: #edf2f7;
+  border-color: var(--line-strong);
+  color: var(--primary);
+}
+.guide-tab-btn.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+.post-list { display: grid; gap: 12px; }
+.post-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  transition: 0.15s;
+  text-decoration: none;
+  color: inherit;
+}
+.post-card:hover {
+  border-color: var(--line-strong);
+  background: #f7f9fb;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(31,35,40,0.08);
+}
+.post-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef1f5;
+  border: 1px solid var(--line);
+  font-size: 20px;
+  border-radius: 4px;
+}
+.post-icon.pdf { background: #fff0f0; }
+.post-icon.txt { background: #f0f4ff; }
+.post-body { flex: 1; min-width: 0; }
+.post-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+.post-desc {
+  font-size: 13px;
+  color: var(--text-soft);
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.post-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #e8edf4;
+  color: var(--primary);
+}
+.post-tag.all        { background: #e8edf4; color: #2e3a49; }
+.post-tag.warrior    { background: #fff0e0; color: #b45309; }
+.post-tag.ranger     { background: #e0f4e0; color: #166534; }
+.post-tag.mage       { background: #ede9fe; color: #5b21b6; }
+.post-tag.assassin   { background: #2a2a3e; color: #c0c0ff; }
+.post-tag.spider     { background: #f3e8ff; color: #7e22ce; }
+.post-tag.noble      { background: #fef9c3; color: #854d0e; }
+.post-tag.shaman     { background: #d1fae5; color: #065f46; }
+.post-tag.lancer     { background: #fee2e2; color: #991b1b; }
+.post-tag.monk       { background: #fce7f3; color: #9d174d; }
+.post-tag.necromancer{ background: #2a1a3e; color: #c4b5fd; }
+.post-filetype { font-size: 11px; color: var(--muted); }
+.post-arrow {
+  flex-shrink: 0;
+  font-size: 18px;
+  color: var(--muted);
+  align-self: center;
+}
+.empty-state {
+  padding: 32px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  border: 1px dashed var(--line);
+  background: var(--panel);
+}
+</style>
+    </head>
+    <body>
+        <div class="site-shell">
+            <aside class="sidebar">
+                <div class="wiki-logo">
+                    <small>Wiki Guide</small>
+                    <h1>星河夢境新手教學指南</h1>
+                    <p>新手入門頁。</p>
+                </div>
+                <section class="side-box">
+                    <h3>分類導覽</h3>
+                    <div class="box-body">
+                        <ul class="side-nav">
+                            <li>
+                                <a href="index.html">首頁</a>
+                            </li>
+                            <li>
+                                <a href="jobs.html">職業</a>
+                            </li>
+                            <li>
+                                <a href="boss.html">Boss</a>
+                            </li>
+                            <li>
+                                <a href="life.html">生活</a>
+                            </li>
+                            <li>
+                                <a href="equipment.html">裝備</a>
+                            </li>
+                            <li>
+                                <a href="monster.html">怪物</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="side-box">
+                    <h3>新手入門</h3>
+                    <div class="box-body">
+                        <ul class="side-nav">
+                            <li>
+                                <a class="active" href="beginner.html">全部文章</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">常見問題</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </aside>
+            <main class="content">
+                <header class="topbar">
+                    <div class="topbar-left">
+                        <div class="topbar-title">新手入門 / Beginner Guide</div>
+                    </div>
+                </header>
+                <div class="page-wrap">
+                    <h1 class="page-title">新手入門</h1>
+                    <p class="page-subtitle">依職業分類的攻略文章與教學文件</p>
+                    <div class="guide-tab-bar">
+                        <button class="guide-tab-btn active" onclick="filterGuide('all', this)">全部</button>
+                        <button class="guide-tab-btn" onclick="filterGuide('warrior', this)">戰士</button>
+                        <button class="guide-tab-btn" onclick="filterGuide('ranger', this)">遊俠</button>
+                        <button class="guide-tab-btn" onclick="filterGuide('mage', this)">法師</button>
+                        <button class="guide-tab-btn" onclick="filterGuide('assassin', this)">刺客</button>
+                        <button class="guide-tab-btn" onclick="filterGuide('spider', this)">蜘蛛</button>
+                        <button class="guide-tab-btn" onclick="filterGuide('noble', this)">貴族</button>
+                        <button class="guide-tab-btn" onclick="filterGuide('shaman', this)">薩滿</button>
+                        <button class="guide-tab-btn" onclick="filterGuide('lancer', this)">槍術</button>
+                        <button class="guide-tab-btn" onclick="filterGuide('monk', this)">僧侶</button>
+                        <button class="guide-tab-btn" onclick="filterGuide('necromancer', this)">死靈</button>
+                    </div>
+                    <div id="guide-post-list" class="post-list"></div>
+                    <a class="back-link" href="index.html">← 返回首頁</a>
+                    <div class="footer-note">星河夢境新手教學指南</div>
+                </div>
+            </main>
+        </div>
+        <script>
+// =============================================
+// 新增文章只需要在這裡加一筆資料
+// jobs 可以填多個，例如 ["warrior", "mage"]
+// 填 ["all"] 代表全職業都看得到
+// type 填 "pdf" 或 "txt"
+// =============================================
+const guideData = [
+  {
+    title: "新手入門攻略 第一篇",
+    desc: "餘者攻略。",
+    jobs: ["all"],
+    file: "assets/guides/01.txt",
+    type: "pdf"
+  },
+  {
+  title: "戰士入門攻略",
+  desc: "戰士的基礎技能與裝備選擇說明。",
+  jobs: ["warrior"],
+  file: "assets/guides/warrior-guide.pdf",
+  type: "pdf"
+},
+  {
+    title: "死靈新手教學",
+    desc: "前期適用。",
+    jobs: ["necromancer"],
+    file: "assets/guides/guide-01.pdf",
+    type: "pdf"
+  },
+];
+
+// 職業標籤中文對照
+const jobLabel = {
+  all:         { text: "全職業",  cls: "all" },
+  warrior:     { text: "戰士",    cls: "warrior" },
+  ranger:      { text: "遊俠",    cls: "ranger" },
+  mage:        { text: "法師",    cls: "mage" },
+  assassin:    { text: "刺客",    cls: "assassin" },
+  spider:      { text: "蜘蛛",    cls: "spider" },
+  noble:       { text: "貴族",    cls: "noble" },
+  shaman:      { text: "薩滿",    cls: "shaman" },
+  lancer:      { text: "槍術",    cls: "lancer" },
+  monk:        { text: "僧侶",    cls: "monk" },
+  necromancer: { text: "死靈",    cls: "necromancer" }
+};
+
+function renderPosts(filter) {
+  const list = document.getElementById("guide-post-list");
+  list.innerHTML = "";
+
+  const filtered = guideData.filter(post => {
+    if (filter === "all") return true;
+    return post.jobs.includes(filter) || post.jobs.includes("all");
+  });
+
+  if (!filtered.length) {
+    list.innerHTML = '<div class="empty-state">此分類尚未新增文章。</div>';
+    return;
+  }
+
+  filtered.forEach(post => {
+    const icon = post.type === "pdf" ? "📄" : "📝";
+    const fileLabel = post.type === "pdf" ? "PDF 文件" : "TXT 文件";
+    const tags = post.jobs.map(j => {
+      const lb = jobLabel[j] || { text: j, cls: "all" };
+      return `<span class="post-tag ${lb.cls}">${lb.text}</span>`;
+    }).join("");
+
+    const card = document.createElement("a");
+    card.className = "post-card";
+    card.href = post.file;
+    card.target = "_blank";
+    card.innerHTML = `
+      <div class="post-icon ${post.type}">${icon}</div>
+      <div class="post-body">
+        <div class="post-title">${post.title}</div>
+        <div class="post-desc">${post.desc}</div>
+        <div class="post-meta">
+          ${tags}
+          <span class="post-filetype">${fileLabel}</span>
+        </div>
+      </div>
+      <div class="post-arrow">›</div>
+    `;
+    list.appendChild(card);
+  });
+}
+
+function filterGuide(tab, btn) {
+  document.querySelectorAll(".guide-tab-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  renderPosts(tab);
+}
+
+renderPosts("all");
+</script>
+    </body>
+</html>

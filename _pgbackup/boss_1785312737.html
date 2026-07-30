@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Boss｜星河夢境新手教學指南</title>
+        <meta name="description" content="星河夢境新手教學指南 Boss 列表頁。"/>
+        <style>
+    :root {
+      --bg: #eef1f5;
+      --bg-page: #f7f8fa;
+      --panel: #ffffff;
+      --panel-soft: #f7f9fb;
+      --panel-head: #e8edf4;
+      --line: #cfd7e2;
+      --line-strong: #bac5d3;
+      --text: #1f2328;
+      --text-soft: #4f5b6a;
+      --muted: #7c8796;
+      --primary: #2e3a49;
+      --primary-2: #445268;
+      --shadow: 0 2px 8px rgba(31, 35, 40, 0.06);
+      --max-width: 1440px;
+      --sidebar-width: 260px;
+      --font: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary-2);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .site-shell {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: var(--sidebar-width) 1fr;
+      min-height: 100vh;
+      background: var(--bg-page);
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 16px 14px 24px;
+      border-right: 1px solid var(--line);
+      background: #f2f5f9;
+    }
+
+    .wiki-logo {
+      margin-bottom: 14px;
+      padding: 14px 14px 16px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .wiki-logo small {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .wiki-logo h1 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.2;
+      color: var(--primary);
+    }
+
+    .wiki-logo p {
+      margin: 8px 0 0;
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    .side-box {
+      margin-bottom: 12px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .side-box h3 {
+      margin: 0;
+      padding: 9px 12px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      background: var(--panel-head);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .side-box .box-body {
+      padding: 10px 12px;
+    }
+
+    .side-nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 6px;
+    }
+
+    .side-nav a {
+      display: block;
+      padding: 4px 0;
+      font-size: 14px;
+      color: var(--text-soft);
+    }
+
+    .side-nav a.active,
+    .side-nav a:hover {
+      color: var(--primary);
+    }
+
+    .content {
+      min-width: 0;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 10px 16px;
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-title {
+      font-size: 14px;
+      color: var(--text-soft);
+    }
+
+    .page-wrap {
+      padding: 18px;
+    }
+
+    .page-title {
+      margin: 0 0 4px;
+      font-size: 30px;
+      line-height: 1.2;
+      color: var(--primary);
+    }
+
+    .page-subtitle {
+      margin: 0 0 18px;
+      font-size: 14px;
+      color: var(--text-soft);
+    }
+
+    .wiki-panel {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      margin-bottom: 18px;
+    }
+
+    .wiki-panel h2 {
+      margin: 0;
+      padding: 10px 12px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary);
+      background: var(--panel-head);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .panel-body {
+      padding: 14px;
+    }
+
+    .list-header {
+      display: grid;
+      grid-template-columns: 72px 1.3fr 1fr 1fr;
+      gap: 12px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      background: var(--panel-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .boss-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .boss-row-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      scroll-margin-top: 24px;
+    }
+
+    .boss-row-link:hover {
+      text-decoration: none;
+    }
+
+    .boss-row {
+      display: grid;
+      grid-template-columns: 72px 1.3fr 1fr 1fr;
+      gap: 12px;
+      align-items: center;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+      transition: 0.18s ease;
+    }
+
+    .boss-row-link:hover .boss-row,
+    .boss-row-link:target .boss-row {
+      border-color: var(--line-strong);
+      background: #fbfcfe;
+      box-shadow: 0 6px 14px rgba(31, 35, 40, 0.05);
+    }
+
+    .boss-image {
+      width: 54px;
+      height: 54px;
+      border: 1px solid var(--line);
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+    }
+
+    .boss-image img {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .boss-name strong {
+      display: block;
+      font-size: 15px;
+      color: var(--primary);
+      margin-bottom: 2px;
+    }
+
+    .boss-area strong,
+    .boss-note strong {
+      display: block;
+      font-size: 14px;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .boss-area span,
+    .boss-note span {
+      display: block;
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 1120px) {
+      .site-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        display: none;
+      }
+    }
+
+    @media (max-width: 840px) {
+      .list-header {
+        display: none;
+      }
+
+      .boss-row {
+        grid-template-columns: 72px 1fr;
+      }
+
+      .boss-area,
+      .boss-note {
+        grid-column: 2 / 3;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page-wrap {
+        padding: 14px;
+      }
+
+      .page-title {
+        font-size: 24px;
+      }
+    }
+  </style>
+    </head>
+    <body>
+        <div class="site-shell">
+            <aside class="sidebar">
+                <div class="wiki-logo">
+                    <small>Wiki Guide</small>
+                    <h1>星河夢境新手教學指南</h1>
+                    <p>Boss 列表頁。</p>
+                </div>
+                <section class="side-box">
+                    <h3>分類導覽</h3>
+                    <div class="box-body">
+                        <ul class="side-nav">
+                            <li>
+                                <a href="index.html">首頁</a>
+                            </li>
+                            <li>
+                                <a href="jobs.html">職業</a>
+                            </li>
+                            <li>
+                                <a class="active" href="boss.html">Boss</a>
+                            </li>
+                            <li>
+                                <a href="life.html">生活</a>
+                            </li>
+                            <li>
+                                <a href="equipment.html">裝備</a>
+                            </li>
+                            <li>
+                                <a href="monster.html">怪物</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </aside>
+            <main class="content">
+                <header class="topbar">
+                    <div class="topbar-title">Boss / Boss List</div>
+                </header>
+                <div class="page-wrap">
+                    <h1 class="page-title">Boss</h1>
+                    <p class="page-subtitle">Boss 列表入口頁</p>
+                    <section class="wiki-panel">
+                        <h2>Boss 列表</h2>
+                        <div class="panel-body">
+                            <div class="list-header">
+                                <div>圖片</div>
+                                <div>Boss 名稱</div>
+                                <div>區域 / 分類</div>
+                                <div>備註</div>
+                            </div>
+                            <div class="boss-list">
+                                <a class="boss-row-link" id="tide-lord" href="boss/tide-lord.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="潮汐領主">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>潮汐領主</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="blackfang" href="boss/blackfang.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="黑牙">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>黑牙</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="fortress-captain" href="boss/fortress-captain.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="堡壘守衛隊長">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>堡壘守衛隊長</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="soul-guardian" href="boss/soul-guardian.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="靈魂守護者">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>靈魂守護者</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="ore-lord" href="boss/ore-lord.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="詭礦領主">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>詭礦領主</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="flameshadow-harbor-lord" href="boss/flameshadow-harbor-lord.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="焰影港主">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>焰影港主</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="ghost-captain" href="boss/ghost-captain.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="幽靈船長">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>幽靈船長</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="fallen-lord" href="boss/fallen-lord.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="墮落領主">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>墮落領主</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="demon-warder" href="boss/demon-warder.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="鎮魔守衛">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>鎮魔守衛</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="leonis" href="boss/leonis.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="雷奧尼斯">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>雷奧尼斯</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="angros" href="boss/angros.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="安格羅斯">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>安格羅斯</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="karon" href="boss/karon.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="卡洛恩">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>卡洛恩</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="thorne" href="boss/thorne.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="索恩">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>索恩</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="onas" href="boss/onas.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="奧納斯">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>奧納斯</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="thesoria" href="boss/thesoria.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="思索利亞">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>思索利亞</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="harold" href="boss/harold.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="哈洛德">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>哈洛德</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="karonis" href="boss/karonis.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="卡羅尼斯">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>卡羅尼斯</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="barogus" href="boss/barogus.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="巴羅古斯">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>巴羅古斯</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="armadis" href="boss/armadis.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="阿爾瑪迪斯">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>阿爾瑪迪斯</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                                <a class="boss-row-link" id="arturos" href="boss/arturos.html"><div class="boss-row">
+                                        <div class="boss-image">
+                                            <img src="assets/images/boss/example.png" alt="阿圖羅斯">
+                                        </div>
+                                        <div class="boss-name">
+                                            <strong>阿圖羅斯</strong>
+                                        </div>
+                                        <div class="boss-area">
+                                            <strong>區域</strong>
+                                            <span>預留</span>
+                                        </div>
+                                        <div class="boss-note">
+                                            <strong>備註</strong>
+                                            <span>預留</span>
+                                        </div>
+                                    </div></a>
+                            </div>
+                            <a class="back-link" href="index.html">← 返回首頁</a>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

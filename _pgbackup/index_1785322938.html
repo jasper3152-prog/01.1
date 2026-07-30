@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>星河夢境新手教學指南</title>
+        <meta name="description" content="星河夢境新手教學指南首頁，採 PRTS / Wiki 風格的攻略站入口框架。"/>
+        <style>:root { --bg: #eef1f5; --bg-page: #f7f8fa; --bg-soft: #f2f4f7; --panel: #ffffff; --panel-soft: #f7f9fb; --panel-head: #e8edf4; --line: #cfd7e2; --line-strong: #bac5d3; --text: #1f2328; --text-soft: #4f5b6a; --muted: #7c8796; --primary: #2e3a49; --primary-2: #445268; --accent: #5f6b7b; --shadow: 0 2px 8px rgba(31, 35, 40, 0.06); --radius-lg: 12px; --radius-md: 10px; --radius-sm: 8px; --max-width: 1440px; --sidebar-width: 260px; --font: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif; } * { box-sizing: border-box; } html { scroll-behavior: smooth; } body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.6; } a { color: var(--primary-2); text-decoration: none; } a:hover { text-decoration: underline; } button, input { font: inherit; } .site-shell { max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: var(--sidebar-width) 1fr; min-height: 100vh; background: var(--bg-page); border-left: 1px solid var(--line); border-right: 1px solid var(--line); } .sidebar { position: sticky; top: 0; height: 100vh; overflow-y: auto; padding: 16px 14px 24px; border-right: 1px solid var(--line); background: #f2f5f9; } .wiki-logo { margin-bottom: 14px; padding: 14px 14px 16px; border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); } .wiki-logo small { display: block; margin-bottom: 4px; font-size: 12px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; } .wiki-logo h1 { margin: 0; font-size: 25px; line-height: 1.2; color: var(--primary); } .wiki-logo p { margin: 8px 0 0; font-size: 13px; color: var(--text-soft); } .side-box { margin-bottom: 12px; border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); } .side-box h3 { margin: 0; padding: 9px 12px; font-size: 14px; font-weight: 700; color: var(--primary); background: var(--panel-head); border-bottom: 1px solid var(--line); } .side-box .box-body { padding: 10px 12px; } .side-nav { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; } .side-nav a { display: block; padding: 4px 0; font-size: 14px; color: var(--text-soft); } .side-nav a:hover, .side-nav a.active { color: var(--primary); } .content { min-width: 0; } .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 10px 16px; background: var(--panel); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; } .topbar-left { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; } .topbar-title { font-size: 14px; color: var(--text-soft); } .topbar-actions { display: flex; align-items: flex-start; gap: 10px; flex-wrap: wrap; position: relative; } .search-area { position: relative; min-width: 320px; width: 320px; } .search-box { display: flex; align-items: center; gap: 8px; width: 100%; padding: 7px 10px; border: 1px solid var(--line); background: var(--bg-page); border-radius: var(--radius-sm); } .search-box input { width: 100%; border: 0; outline: none; background: transparent; color: var(--text); } .search-dropdown { position: absolute; top: calc(100% + 6px); left: 0; width: 100%; max-height: 420px; overflow-y: auto; border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); display: none; z-index: 50; } .search-dropdown.active { display: block; } .search-result-item { display: block; padding: 10px 12px; border-bottom: 1px solid #edf1f5; color: inherit; text-decoration: none; } .search-result-item:last-child { border-bottom: 0; } .search-result-item:hover { background: #fbfcfe; text-decoration: none; } .search-result-item strong { display: block; margin-bottom: 2px; font-size: 14px; color: var(--primary); } .search-result-meta { font-size: 12px; color: var(--muted); margin-bottom: 3px; } .search-result-desc { font-size: 12px; color: var(--text-soft); } .search-empty { padding: 12px; color: var(--muted); font-size: 13px; } .page-wrap { padding: 18px; } .page-title { margin: 0 0 4px; font-size: 30px; line-height: 1.2; color: var(--primary); } .page-subtitle { margin: 0 0 18px; font-size: 14px; color: var(--text-soft); } .notice-bar { margin-bottom: 18px; padding: 12px 14px; border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); } .notice-bar strong { color: var(--primary); } .layout-grid { display: grid; grid-template-columns: 1.35fr 0.9fr; gap: 16px; margin-bottom: 18px; } .wiki-panel { border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); } .wiki-panel h2 { margin: 0; padding: 10px 12px; font-size: 15px; font-weight: 700; color: var(--primary); background: var(--panel-head); border-bottom: 1px solid var(--line); } .panel-body { padding: 14px; } .summary-text { margin: 0; font-size: 14px; color: var(--text-soft); } .summary-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; } .summary-links a { display: inline-block; padding: 7px 10px; border: 1px solid var(--line); background: var(--panel-soft); color: var(--primary); font-size: 13px; } .summary-links a:hover { background: #edf2f7; text-decoration: none; } .list-links { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; } .list-links li { padding-bottom: 8px; border-bottom: 1px solid #edf1f5; } .list-links li:last-child { padding-bottom: 0; border-bottom: 0; } .list-links a { display: block; font-size: 14px; color: var(--primary-2); } .list-links span { display: block; margin-top: 3px; font-size: 12px; color: var(--muted); } .entry-panel { margin-bottom: 18px; } .entry-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; } .entry-card { display: block; min-height: 122px; padding: 12px; border: 1px solid var(--line); background: #fff; transition: 0.18s ease; } .entry-card:hover { border-color: var(--line-strong); background: #fbfcfe; box-shadow: 0 6px 14px rgba(31, 35, 40, 0.05); text-decoration: none; } .entry-card strong { display: block; margin-bottom: 8px; font-size: 15px; color: var(--primary); } .entry-card p { margin: 0; font-size: 13px; color: var(--text-soft); } .two-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 18px; } .category-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; } .category-list li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 9px 10px; border: 1px solid #e3e9f0; background: #fff; font-size: 14px; } .category-list span { font-size: 12px; color: var(--muted); white-space: nowrap; } .note-box { padding: 14px; border: 1px dashed var(--line-strong); background: #fcfdff; color: var(--text-soft); font-size: 14px; } .footer-note { padding: 12px 0 6px; text-align: center; color: var(--muted); font-size: 12px; } @media (max-width: 1120px) { .site-shell {  grid-template-columns: 1fr; }  .sidebar {  display: none; }  .layout-grid, .two-col, .entry-grid {  grid-template-columns: 1fr; } } @media (max-width: 720px) { .page-wrap {  padding: 14px; }  .page-title {  font-size: 24px; }  .search-area {  width: 100%;  min-width: 100%; }  .topbar-left, .topbar-actions {  width: 100%; }  .topbar {  align-items: stretch; } }</style>
+    </head>
+    <body>
+        <div class="site-shell">
+            <aside class="sidebar">
+                <div class="wiki-logo">
+                    <small>Wiki Guide</small>
+                    <h1>星河夢境新手教學指南</h1>
+                    <p>PRTS 風格首頁框架，可作為後續分類頁與條目頁入口。</p>
+                </div>
+                <section class="side-box">
+                    <h3>首頁導覽</h3>
+                    <div class="box-body">
+                        <ul class="side-nav">
+                            <li>
+                                <a class="active" href="#overview">首頁總覽</a>
+                            </li>
+                            <li>
+                                <a href="#main-entry">主要條目</a>
+                            </li>
+                            <li>
+                                <a href="#recommend">推薦閱讀</a>
+                            </li>
+                            <li>
+                                <a href="#site-map">分類索引</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="side-box">
+                    <h3>主要分類</h3>
+                    <div class="box-body">
+                        <ul class="side-nav">
+                            <li>
+                                <a href="jobs.html">職業</a>
+                            </li>
+                            <li>
+                                <a href="boss.html">Boss</a>
+                            </li>
+                            <li>
+                                <a href="life.html">生活</a>
+                            </li>
+                            <li>
+                                <a href="equipment.html">裝備</a>
+                            </li>
+                            <li>
+                                <a href="monster.html">怪物</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="side-box">
+                    <h3>站點工具</h3>
+                    <div class="box-body">
+                        <ul class="side-nav">
+                            <li>
+                                <a href="all-pages.html">全部條目</a>
+                            </li>
+                            <li>
+                                <a href="templates.html">模板總覽</a>
+                            </li>
+                            <li>
+                                <a href="updates.html">更新日誌</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">常見問題</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </aside>
+            <main class="content">
+                <header class="topbar">
+                    <div class="topbar-left">
+                        <div class="topbar-title">首頁 / 攻略站入口</div>
+                    </div>
+                    <div class="topbar-actions">
+                        <div class="search-area">
+                            <div class="search-box">
+                                <span>🔎</span>
+                                <input id="globalSearchInput" type="text" placeholder="搜尋職業、Boss、生活、裝備、怪物..."/>
+                            </div>
+                            <div id="searchResults" class="search-dropdown">
+                                <div class="search-empty">請輸入關鍵字開始搜尋。</div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="page-wrap">
+                    <h1 class="page-title" id="overview">星河夢境新手教學指南</h1>
+                    <p class="page-subtitle">首頁空白框架｜PRTS / Wiki 風格</p>
+                    <div class="notice-bar">
+                        <strong>本站公告：</strong>
+                        目前為首頁框架。後續可從這裡連結到職業、Boss、生活、裝備、怪物等分類頁。
+                    </div>
+                    <div class="layout-grid">
+                        <section class="wiki-panel">
+                            <h2>站點總覽</h2>
+                            <div class="panel-body">
+                                <p class="summary-text">
+                這裡作為整個攻略站首頁入口。後續可從五大主分類往下延伸到分類頁、條目頁、模板頁、索引頁與更新頁。 </p>
+                                <div class="summary-links">
+                                    <a href="#main-entry">主要條目</a>
+                                    <a href="#recommend">推薦閱讀</a>
+                                    <a href="#site-map">分類索引</a>
+                                    <a href="templates.html">模板總覽</a>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="wiki-panel">
+                            <h2>最新更新</h2>
+                            <div class="panel-body">
+                                <ul class="list-links">
+                                    <li>
+                                        <a href="updates.html">首頁框架建立完成</a>
+                                        <span>更新日期預留</span>
+                                    </li>
+                                    <li>
+                                        <a href="jobs.html">職業分類頁已建立</a>
+                                        <span>內容持續補充中</span>
+                                    </li>
+                                    <li>
+                                        <a href="boss.html">Boss 分類頁已建立</a>
+                                        <span>內容持續補充中</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    <section class="wiki-panel entry-panel" id="main-entry">
+                        <h2>主要條目</h2>
+                        <div class="panel-body">
+                            <div class="entry-grid">
+                                <a class="entry-card" href="jobs.html"> <strong>職業</strong> <p>職業總覽、職業條目、技能方向、流派分類。</p> </a>
+                                <a class="entry-card" href="boss.html"> <strong>Boss</strong> <p>Boss 圖鑑、掉落整理、出現地點、機制與打法。</p> </a>
+                                <a class="entry-card" href="life.html"> <strong>生活</strong> <p>挖礦、採集、釣魚、狩獵、煉金與材料用途。</p> </a>
+                                <a class="entry-card" href="equipment.html"> <strong>裝備</strong> <p>武器、防具、飾品、來源索引與裝備推薦。</p> </a>
+                                <a class="entry-card" href="monster.html"> <strong>怪物</strong> <p>一般怪物、副本怪物、掉落、數值與分區資料。</p> </a>
+                                <a class="entry-card" href="templates.html"> <strong>模板</strong> <p>後續條目新增用的共用模板頁，例如 Boss、裝備、怪物條目模板。</p> </a>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="two-col">
+                        <section class="wiki-panel" id="recommend">
+                            <h2>推薦閱讀</h2>
+                            <div class="panel-body">
+                                <ul class="list-links">
+                                    <li>
+                                        <a href="beginner.html">新手入門</a>
+                                        <span>首頁外的新手導覽入口頁</span>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html">常見問題</a>
+                                        <span>新手 FAQ、系統 FAQ、掉落 FAQ</span>
+                                    </li>
+                                    <li>
+                                        <a href="all-pages.html">全部條目</a>
+                                        <span>整站索引頁預留</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="wiki-panel">
+                            <h2>維護區</h2>
+                            <div class="panel-body">
+                                <ul class="list-links">
+                                    <li>
+                                        <a href="updates.html">更新日誌</a>
+                                        <span>記錄頁面新增與內容修正</span>
+                                    </li>
+                                    <li>
+                                        <a href="templates.html">模板總覽</a>
+                                        <span>統一條目格式與新增方式</span>
+                                    </li>
+                                    <li>
+                                        <a href="site-rules.html">編輯規則</a>
+                                        <span>後續站內維護說明預留</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    <section class="wiki-panel" id="site-map">
+                        <h2>分類索引</h2>
+                        <div class="panel-body">
+                            <div class="two-col" style="margin-bottom: 0;">
+                                <div>
+                                    <ul class="category-list">
+                                        <li>
+                                            <strong>職業</strong>
+                                            <span>jobs.html</span>
+                                        </li>
+                                        <li>
+                                            <strong>Boss</strong>
+                                            <span>boss.html</span>
+                                        </li>
+                                        <li>
+                                            <strong>生活</strong>
+                                            <span>life.html</span>
+                                        </li>
+                                        <li>
+                                            <strong>裝備</strong>
+                                            <span>equipment.html</span>
+                                        </li>
+                                        <li>
+                                            <strong>怪物</strong>
+                                            <span>monster.html</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="category-list">
+                                        <li>
+                                            <strong>新手入門</strong>
+                                            <span>beginner.html</span>
+                                        </li>
+                                        <li>
+                                            <strong>FAQ</strong>
+                                            <span>faq.html</span>
+                                        </li>
+                                        <li>
+                                            <strong>模板總覽</strong>
+                                            <span>templates.html</span>
+                                        </li>
+                                        <li>
+                                            <strong>更新日誌</strong>
+                                            <span>updates.html</span>
+                                        </li>
+                                        <li>
+                                            <strong>全部條目</strong>
+                                            <span>all-pages.html</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="note-box" style="margin-top: 16px;">
+                                這裡目前為首頁框架與全域搜尋入口。新增條目後，記得同步把資料加到首頁搜尋索引中。
+</div>
+                        </div>
+                    </section>
+                    <div class="footer-note">
+                        星河夢境新手教學指南｜PRTS 風格首頁框架
+</div>
+                </div>
+            </main>
+        </div>
+        <script>
+    const searchData = [
+      { name: "戰士", category: "職業", desc: "職業條目", url: "jobs/warrior.html" },
+      { name: "刺客", category: "職業", desc: "職業條目", url: "jobs/assassin.html" },
+      { name: "死靈", category: "職業", desc: "職業條目", url: "jobs/necromancer.html" },
+      { name: "遊俠", category: "職業", desc: "職業條目", url: "jobs/ranger.html" },
+      { name: "槍術", category: "職業", desc: "職業條目", url: "jobs/lancer.html" },
+      { name: "貴族", category: "職業", desc: "職業條目", url: "jobs/noble.html" },
+      { name: "蜘蛛", category: "職業", desc: "職業條目", url: "jobs/spider.html" },
+      { name: "法師", category: "職業", desc: "職業條目", url: "jobs/mage.html" },
+      { name: "僧侶", category: "職業", desc: "職業條目", url: "jobs/monk.html" },
+      { name: "薩滿", category: "職業", desc: "職業條目", url: "jobs/shaman.html" },
+
+      { name: "潮汐領主", category: "Boss", desc: "Boss 列表", url: "boss.html#tide-lord" },
+      { name: "黑牙", category: "Boss", desc: "Boss 列表", url: "boss.html#blackfang" },
+      { name: "堡壘守衛隊長", category: "Boss", desc: "Boss 列表", url: "boss.html#fortress-captain" },
+      { name: "靈魂守護者", category: "Boss", desc: "Boss 列表", url: "boss.html#soul-guardian" },
+      { name: "詭礦領主", category: "Boss", desc: "Boss 列表", url: "boss.html#ore-lord" },
+      { name: "焰影港主", category: "Boss", desc: "Boss 列表", url: "boss.html#flameshadow-harbor-lord" },
+      { name: "幽靈船長", category: "Boss", desc: "Boss 列表", url: "boss.html#ghost-captain" },
+      { name: "墮落領主", category: "Boss", desc: "Boss 列表", url: "boss.html#fallen-lord" },
+      { name: "鎮魔守衛", category: "Boss", desc: "Boss 列表", url: "boss.html#demon-warder" },
+      { name: "雷奧尼斯", category: "Boss", desc: "Boss 列表", url: "boss.html#leonis" },
+      { name: "安格羅斯", category: "Boss", desc: "Boss 列表", url: "boss.html#angros" },
+      { name: "卡洛恩", category: "Boss", desc: "Boss 列表", url: "boss.html#karon" },
+      { name: "索恩", category: "Boss", desc: "Boss 列表", url: "boss.html#thorne" },
+      { name: "奧納斯", category: "Boss", desc: "Boss 列表", url: "boss.html#onas" },
+      { name: "思索利亞", category: "Boss", desc: "Boss 列表", url: "boss.html#thesoria" },
+      { name: "哈洛德", category: "Boss", desc: "Boss 列表", url: "boss.html#harold" },
+      { name: "卡羅尼斯", category: "Boss", desc: "Boss 列表", url: "boss.html#karonis" },
+      { name: "巴羅古斯", category: "Boss", desc: "Boss 列表", url: "boss.html#barogus" },
+      { name: "阿爾瑪迪斯", category: "Boss", desc: "Boss 列表", url: "boss.html#armadis" },
+      { name: "阿圖羅斯", category: "Boss", desc: "Boss 列表", url: "boss.html#arturos" },
+
+      { name: "挖礦", category: "生活", desc: "生活技能頁", url: "life/mining.html" },
+      { name: "狩獵", category: "生活", desc: "生活技能頁", url: "life/hunting.html" },
+      { name: "採集", category: "生活", desc: "生活技能頁", url: "life/gathering.html" },
+      { name: "釣魚", category: "生活", desc: "生活技能頁", url: "life/fishing.html" },
+      { name: "煉金", category: "生活", desc: "生活技能頁", url: "life/alchemy.html" },
+      { name: "伐木", category: "生活", desc: "生活技能頁", url: "life/logging.html" },
+      { name: "貿易", category: "生活", desc: "生活技能頁", url: "life/trading.html" },
+
+      { name: "奧克拉斯的海洋戒指", category: "裝備", desc: "裝備條目", url: "equipment/oklas-ocean-ring.html" },
+      { name: "潮痕疾掠之鏈", category: "裝備", desc: "裝備條目", url: "equipment/tidetrace-chain.html" },
+      { name: "遠古大海祝福釣竿", category: "裝備", desc: "裝備條目", url: "equipment/ancient-sea-rod.html" },
+      { name: "寒霜冰紋之手套", category: "裝備", desc: "裝備條目", url: "equipment/frostmark-gloves.html" },
+      { name: "堡壘守護者的鐵甲", category: "裝備", desc: "裝備條目", url: "equipment/fortress-armor.html" },
+      { name: "守護者的遺忘法杖", category: "裝備", desc: "裝備條目", url: "equipment/forgotten-staff.html" },
+      { name: "沉睡的嗅探獸帽子", category: "裝備", desc: "裝備條目", url: "equipment/sleeper-beast-hat.html" },
+      { name: "幽靈之火-幽靈之背飾", category: "裝備", desc: "裝備條目", url: "equipment/ghostfire-backpiece.html" },
+      { name: "奧客塔維亞的短弓", category: "裝備", desc: "裝備條目", url: "equipment/octavia-shortbow.html" },
+      { name: "威爾斯的烈焰法杖", category: "裝備", desc: "裝備條目", url: "equipment/wills-flame-staff.html" },
+      { name: "史丹提拉斯的鋼鐵長劍", category: "裝備", desc: "裝備條目", url: "equipment/standiras-steel-sword.html" },
+      { name: "安格羅斯的穩重之靴", category: "裝備", desc: "裝備條目", url: "equipment/angros-steady-boots.html" },
+      { name: "海洋之心-海豚的元素之力", category: "裝備", desc: "裝備條目", url: "equipment/oceanheart-element.html" },
+      { name: "海豚釣竿", category: "裝備", desc: "裝備條目", url: "equipment/dolphin-rod.html" },
+      { name: "戰傷之掠奪獸長槍", category: "裝備", desc: "裝備條目", url: "equipment/warwound-lance.html" },
+      { name: "黑脈戒指", category: "裝備", desc: "裝備條目", url: "equipment/black-vein-ring.html" },
+      { name: "鋼鐵之心", category: "裝備", desc: "裝備條目", url: "equipment/steelheart.html" },
+
+      { name: "沙灘螃蟹", category: "怪物", desc: "怪物列表", url: "monster.html#lv1-crab" },
+      { name: "魚人斥侯", category: "怪物", desc: "怪物列表", url: "monster.html#lv2-fish-scout" },
+      { name: "迷失幽靈海盜", category: "怪物", desc: "怪物列表", url: "monster.html#lv3-lost-ghost-pirate" },
+      { name: "盜賊潛行者", category: "怪物", desc: "怪物列表", url: "monster.html#lv4-thief-stalker" },
+      { name: "弓箭散兵", category: "怪物", desc: "怪物列表", url: "monster.html#lv5-archer-skirmisher" },
+      { name: "狂暴斧手", category: "怪物", desc: "怪物列表", url: "monster.html#lv6-raging-axeman" },
+      { name: "骷髏戰士", category: "怪物", desc: "怪物列表", url: "monster.html#lv7-skeleton-warrior" },
+      { name: "黑暗弓手", category: "怪物", desc: "怪物列表", url: "monster.html#lv8-dark-archer" },
+      { name: "詛咒法師", category: "怪物", desc: "怪物列表", url: "monster.html#lv9-cursed-mage" },
+      { name: "安寧怨靈", category: "怪物", desc: "怪物列表", url: "monster.html#lv10-peace-wraith" },
+      { name: "受詛咒殭屍", category: "怪物", desc: "怪物列表", url: "monster.html#lv11-cursed-zombie" },
+      { name: "哀號女妖", category: "怪物", desc: "怪物列表", url: "monster.html#lv12-wailing-banshee" },
+      { name: "墮落礦工", category: "怪物", desc: "怪物列表", url: "monster.html#lv13-fallen-miner" },
+      { name: "礦坑毒蛛", category: "怪物", desc: "怪物列表", url: "monster.html#lv14-mine-poison-spider" },
+      { name: "變異蝙蝠", category: "怪物", desc: "怪物列表", url: "monster.html#lv15-mutant-bat" },
+      { name: "焰影水手", category: "怪物", desc: "怪物列表", url: "monster.html#lv16-flameshadow-sailor" },
+      { name: "焰影海盜", category: "怪物", desc: "怪物列表", url: "monster.html#lv17-flameshadow-pirate" },
+      { name: "焰影術士", category: "怪物", desc: "怪物列表", url: "monster.html#lv18-flameshadow-warlock" },
+      { name: "船骸骷髏", category: "怪物", desc: "怪物列表", url: "monster.html#lv19-shipwreck-skeleton" },
+      { name: "溺亡水手", category: "怪物", desc: "怪物列表", url: "monster.html#lv20-drowned-sailor" },
+      { name: "廢船艙鼠", category: "怪物", desc: "怪物列表", url: "monster.html#lv21-cabin-rat" },
+      { name: "殘破守衛", category: "怪物", desc: "怪物列表", url: "monster.html#lv22-broken-guard" },
+      { name: "暗影怨靈", category: "怪物", desc: "怪物列表", url: "monster.html#lv23-shadow-wraith" },
+      { name: "詛咒獵犬", category: "怪物", desc: "怪物列表", url: "monster.html#lv24-cursed-hound" },
+      { name: "狂信教徒", category: "怪物", desc: "怪物列表", url: "monster.html#lv25-zealot" },
+      { name: "石像魔像", category: "怪物", desc: "怪物列表", url: "monster.html#lv26-stone-golem" },
+      { name: "火焰小惡魔", category: "怪物", desc: "怪物列表", url: "monster.html#lv27-fire-imp" },
+      { name: "石像守衛", category: "怪物", desc: "怪物列表", url: "monster.html#lv28-stone-guardian" },
+      { name: "鎮魂怨靈", category: "怪物", desc: "怪物列表", url: "monster.html#lv29-soulbound-wraith" },
+      { name: "失落的侍僧", category: "怪物", desc: "怪物列表", url: "monster.html#lv30-lost-acolyte" },
+      { name: "光耀步兵", category: "怪物", desc: "怪物列表", url: "monster.html#lv31-radiant-infantry" },
+      { name: "破戎弓手", category: "怪物", desc: "怪物列表", url: "monster.html#lv32-broken-bowman" },
+      { name: "炎咒祭獸", category: "怪物", desc: "怪物列表", url: "monster.html#lv33-flame-rite-beast" },
+      { name: "熾焰武僧", category: "怪物", desc: "怪物列表", url: "monster.html#lv34-blazing-monk" },
+      { name: "熔錘戰狂", category: "怪物", desc: "怪物列表", url: "monster.html#lv35-molten-berserker" },
+      { name: "灰燼祈祭者", category: "怪物", desc: "怪物列表", url: "monster.html#lv36-ash-priest" },
+      { name: "風行稻靈", category: "怪物", desc: "怪物列表", url: "monster.html#lv37-wind-paddy-spirit" },
+      { name: "鏽鐵稻鎧", category: "怪物", desc: "怪物列表", url: "monster.html#lv38-rust-rice-armor" },
+      { name: "麥風妖", category: "怪物", desc: "怪物列表", url: "monster.html#lv39-wheat-wind-fiend" },
+      { name: "腐蝕骸兵", category: "怪物", desc: "怪物列表", url: "monster.html#lv40-corroded-bone-soldier" },
+      { name: "怨火幽魂", category: "怪物", desc: "怪物列表", url: "monster.html#lv41-hatefire-phantom" },
+      { name: "墳守魔像", category: "怪物", desc: "怪物列表", url: "monster.html#lv42-grave-golem" },
+      { name: "殘光守衛", category: "怪物", desc: "怪物列表", url: "monster.html#lv43-fading-light-guard" },
+      { name: "蔓生行者", category: "怪物", desc: "怪物列表", url: "monster.html#lv44-vinewalker" },
+      { name: "墮天祭司", category: "怪物", desc: "怪物列表", url: "monster.html#lv45-fallen-priest" },
+      { name: "冰港狂戰士", category: "怪物", desc: "怪物列表", url: "monster.html#lv46-ice-port-berserker" },
+      { name: "霜縛女巫", category: "怪物", desc: "怪物列表", url: "monster.html#lv47-frostbound-witch" },
+      { name: "獄冰巨狼", category: "怪物", desc: "怪物列表", url: "monster.html#lv48-ice-hell-wolf" },
+      { name: "冰瀑石衛", category: "怪物", desc: "怪物列表", url: "monster.html#lv49-icefall-guard" },
+      { name: "水靈塑師", category: "怪物", desc: "怪物列表", url: "monster.html#lv50-water-sculptor" },
+      { name: "霜纏亡靈", category: "怪物", desc: "怪物列表", url: "monster.html#lv51-frostbound-undead" },
+      { name: "熔岩魔兵", category: "怪物", desc: "怪物列表", url: "monster.html#lv52-lava-soldier" },
+      { name: "血獄薩滿", category: "怪物", desc: "怪物列表", url: "monster.html#lv53-blood-shaman" },
+      { name: "鎔核巨蟲", category: "怪物", desc: "怪物列表", url: "monster.html#lv54-core-worm" },
+      { name: "灼魂禁衛", category: "怪物", desc: "怪物列表", url: "monster.html#lv55-burning-guard" },
+      { name: "熔心巨像", category: "怪物", desc: "怪物列表", url: "monster.html#lv56-molten-colossus" },
+      { name: "獄咒祭官", category: "怪物", desc: "怪物列表", url: "monster.html#lv57-curse-priest" },
+      { name: "烈誓裁決者", category: "怪物", desc: "怪物列表", url: "monster.html#lv58-oath-judge" },
+      { name: "灰燼術尊", category: "怪物", desc: "怪物列表", url: "monster.html#lv59-ash-sage" },
+      { name: "黑燼巨像", category: "怪物", desc: "怪物列表", url: "monster.html#lv60-black-ash-colossus" }
+    ];
+
+    const searchInput = document.getElementById("globalSearchInput");
+    const searchResults = document.getElementById("searchResults");
+
+    function renderResults(list, hasKeyword) {
+      searchResults.innerHTML = "";
+
+      if (!hasKeyword) {
+        searchResults.innerHTML = '<div class="search-empty">請輸入關鍵字開始搜尋。</div>';
+        searchResults.classList.remove("active");
+        return;
+      }
+
+      searchResults.classList.add("active");
+
+      if (!list.length) {
+        searchResults.innerHTML = '<div class="search-empty">沒有找到符合的條目。</div>';
+        return;
+      }
+
+      list.forEach(item => {
+        const a = document.createElement("a");
+        a.className = "search-result-item";
+        a.href = item.url;
+        a.innerHTML = `
+          <strong>${item.name}</strong>
+          <div class="search-result-meta">${item.category}</div>
+          <div class="search-result-desc">${item.desc}</div>
+        `;
+        searchResults.appendChild(a);
+      });
+    }
+
+    function doSearch(keyword) {
+      const value = keyword.trim().toLowerCase();
+
+      if (!value) {
+        renderResults([], false);
+        return;
+      }
+
+      const filtered = searchData.filter(item => {
+        return (
+          item.name.toLowerCase().includes(value) ||
+          item.category.toLowerCase().includes(value) ||
+          item.desc.toLowerCase().includes(value)
+        );
+      });
+
+      renderResults(filtered, true);
+    }
+
+    searchInput.addEventListener("input", (e) => {
+      doSearch(e.target.value);
+    });
+
+    document.addEventListener("click", (e) => {
+      const searchArea = document.querySelector(".search-area");
+      if (!searchArea.contains(e.target)) {
+        searchResults.classList.remove("active");
+      }
+    });
+
+    searchInput.addEventListener("focus", () => {
+      if (searchInput.value.trim()) {
+        searchResults.classList.add("active");
+      }
+    });
+  </script>
+    </body>
+</html>

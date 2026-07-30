@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>文章標題｜星河夢境新手教學指南</title>
+        <link rel="stylesheet" href="../assets/css/wiki.css"/>
+        <style>
+
+/* === 文章頁專用版面 === */
+.article-wrap {
+  max-width: 780px;
+}
+
+/* === 麵包屑 === */
+.article-breadcrumb {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.article-breadcrumb a { color: var(--text-soft); }
+.article-breadcrumb a:hover { color: var(--primary); text-decoration: none; }
+.article-breadcrumb span { color: var(--muted); }
+
+/* === 封面區 === */
+.article-cover {
+  width: 100%;
+  background: linear-gradient(135deg, #1e2d3d 0%, #2e4057 50%, #1a3a4a 100%);
+  border: 1px solid var(--line);
+  padding: 36px 32px 28px;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+.article-cover::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 50%;
+}
+.article-cover::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: 20px;
+  width: 280px;
+  height: 280px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 50%;
+}
+.article-cover-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+}
+.cover-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+}
+.cover-tag.all         { background: rgba(200,210,220,0.15); }
+.cover-tag.warrior     { background: rgba(180,83,9,0.4);  border-color: rgba(251,191,36,0.3); }
+.cover-tag.ranger      { background: rgba(22,101,52,0.4); border-color: rgba(52,211,153,0.3); }
+.cover-tag.mage        { background: rgba(91,33,182,0.4); border-color: rgba(167,139,250,0.3); }
+.cover-tag.assassin    { background: rgba(15,15,30,0.6);  border-color: rgba(148,163,184,0.3); }
+.cover-tag.spider      { background: rgba(126,34,206,0.4);border-color: rgba(216,180,254,0.3); }
+.cover-tag.noble       { background: rgba(133,77,14,0.4); border-color: rgba(253,224,71,0.3); }
+.cover-tag.shaman      { background: rgba(6,95,70,0.4);   border-color: rgba(52,211,153,0.3); }
+.cover-tag.lancer      { background: rgba(153,27,27,0.4); border-color: rgba(252,165,165,0.3); }
+.cover-tag.monk        { background: rgba(157,23,77,0.4); border-color: rgba(249,168,212,0.3); }
+.cover-tag.necromancer { background: rgba(30,10,50,0.6);  border-color: rgba(196,181,253,0.3); }
+.article-cover-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.3;
+  margin: 0 0 16px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.article-cover-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+.article-cover-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* === 文章資訊欄 === */
+.article-infobar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 18px;
+  background: var(--panel-head);
+  border: 1px solid var(--line);
+  border-top: none;
+  font-size: 13px;
+  color: var(--text-soft);
+  margin-bottom: 20px;
+}
+.article-infobar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.infobar-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.infobar-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* === 文章主體 === */
+.article-body {
+  padding: 28px 32px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--text);
+}
+.article-body h2 {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 36px 0 14px;
+  padding: 10px 14px;
+  background: var(--panel-head);
+  border-left: 5px solid var(--primary-2);
+  border-bottom: 1px solid var(--line);
+}
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 26px 0 10px;
+  padding-left: 10px;
+  border-left: 3px solid #93a8c0;
+}
+.article-body p { margin: 0 0 16px; }
+.article-body ul,
+.article-body ol {
+  padding-left: 24px;
+  margin: 0 0 16px;
+}
+.article-body li { margin-bottom: 8px; }
+.article-body strong { color: var(--primary); font-weight: 700; }
+.article-body a { color: var(--primary-2); text-decoration: underline; }
+.article-body hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 28px 0;
+}
+.article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+.article-body table th {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  padding: 9px 14px;
+  text-align: left;
+  border: 1px solid var(--primary);
+}
+.article-body table td {
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  vertical-align: top;
+  background: #fff;
+}
+.article-body table tr:nth-child(even) td { background: #f9fafb; }
+.article-body table tr:hover td { background: #f0f4f9; }
+.article-body code {
+  font-family: monospace;
+  font-size: 13px;
+  background: #f0f4f8;
+  padding: 1px 6px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: #c0392b;
+}
+
+/* === 提示框 === */
+.notice {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border-radius: 0 6px 6px 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.notice-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.notice.info  { background: #eff6ff; border-left: 4px solid #3b82f6; color: #1e40af; }
+.notice.tip   { background: #ecfdf5; border-left: 4px solid #10b981; color: #065f46; }
+.notice.warn  { background: #fffbeb; border-left: 4px solid #f59e0b; color: #92400e; }
+.notice.danger{ background: #fef2f2; border-left: 4px solid #ef4444; color: #991b1b; }
+
+/* === 重點卡片 === */
+.highlight-card {
+  padding: 16px 18px;
+  background: #f8faff;
+  border: 1px solid #c7d8f0;
+  border-radius: 6px;
+  margin-bottom: 18px;
+}
+.highlight-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+.highlight-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+/* === 文章底部 === */
+.article-footer {
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  background: var(--panel-soft);
+  margin-bottom: 20px;
+}
+.article-footer-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+.article-footer-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.article-footer-links a {
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.15s;
+}
+.article-footer-links a:hover {
+  background: #edf2f7;
+  text-decoration: none;
+  border-color: var(--line-strong);
+}
+.article-footer-links a.primary-btn {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+.article-footer-links a.primary-btn:hover {
+  background: var(--primary-2);
+}
+
+@media (max-width: 720px) {
+  .article-cover { padding: 24px 18px 20px; }
+  .article-cover-title { font-size: 22px; }
+  .article-body { padding: 20px 16px; }
+}
+</style>
+    </head>
+    <body>
+        <div class="site-shell">
+            <aside class="sidebar">
+                <div class="wiki-logo">
+                    <small>Wiki Guide</small>
+                    <h1>星河夢境新手教學指南</h1>
+                    <p>攻略文章頁。</p>
+                </div>
+                <section class="side-box">
+                    <h3>分類導覽</h3>
+                    <div class="box-body">
+                        <ul class="side-nav">
+                            <li>
+                                <a href="../index.html">首頁</a>
+                            </li>
+                            <li>
+                                <a href="../jobs.html">職業</a>
+                            </li>
+                            <li>
+                                <a href="../boss.html">Boss</a>
+                            </li>
+                            <li>
+                                <a href="../life.html">生活</a>
+                            </li>
+                            <li>
+                                <a href="../equipment.html">裝備</a>
+                            </li>
+                            <li>
+                                <a href="../monster.html">怪物</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="side-box">
+                    <h3>新手入門</h3>
+                    <div class="box-body">
+                        <ul class="side-nav">
+                            <li>
+                                <a href="../beginner.html">全部文章</a>
+                            </li>
+                            <li>
+                                <a href="../faq.html">常見問題</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </aside>
+            <main class="content">
+                <header class="topbar">
+                    <div class="topbar-left">
+                        <div class="topbar-title">新手入門 / 攻略文章</div>
+                    </div>
+                </header>
+                <div class="page-wrap">
+                    <div class="article-wrap">
+                        <!-- 麵包屑 -->
+                        <div class="article-breadcrumb">
+                            <a href="../index.html">首頁</a>
+                            <span>›</span>
+                            <a href="../beginner.html">新手入門</a>
+                            <span>›</span>
+                            <span>文章標題</span>
+                        </div>
+                        <!-- 封面 -->
+                        <div class="article-cover">
+                            <div class="article-cover-tags">
+                                <span class="cover-tag necromancer">死靈</span>
+                                <!-- 多職業範例：
+            <span class="cover-tag warrior">戰士</span>
+            <span class="cover-tag all">全職業</span>
+            -->
+                            </div>
+                            <h1 class="article-cover-title">文章標題寫這裡</h1>
+                            <div class="article-cover-meta">
+                                <span>📅 更新日期預留</span>
+                                <span>✍️ 作者預留</span>
+                                <span>📖 閱讀時間預留</span>
+                            </div>
+                        </div>
+                        <!-- 資訊欄 -->
+                        <div class="article-infobar">
+                            <div class="article-infobar-left">
+                                <div class="infobar-item">
+                                    適用職業：<span class="infobar-badge">死靈</span>
+                                </div>
+                                <div class="infobar-item">
+                                    適用階段：<span class="infobar-badge">前期</span>
+                                </div>
+                                <div class="infobar-item">
+                                    難度：<span class="infobar-badge">入門</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 文章內容 -->
+                        <div class="article-body">
+                            <div class="notice tip">
+                                <span class="notice-icon">💡</span>
+                                <div>這是提示框，適合放重要提醒。class 改成 <code>warn</code> 變黃色警告，改成 <code>danger</code> 變紅色，改成 <code>info</code> 變藍色。
+                                </div>
+                            </div>
+                            <h2>前言</h2>
+                            <p>這裡寫文章開頭說明，把 TXT 的內容直接貼進來就好。每段用 <code>&lt;p&gt;</code> 包起來，標題用 <code>&lt;h2&gt;</code> 或 <code>&lt;h3&gt;</code>。</p>
+                            <div class="highlight-card">
+                                <div class="highlight-card-title">⚡ 重點整理</div>
+                                <ul>
+                                    <li>重點一</li>
+                                    <li>重點二</li>
+                                    <li>重點三</li>
+                                </ul>
+                            </div>
+                            <h2>第一段落</h2>
+                            <p>內文寫這裡。</p>
+                            <p>繼續寫。</p>
+                            <h3>小標題</h3>
+                            <p>小標題下面的內容。</p>
+                            <ul>
+                                <li>條列項目一</li>
+                                <li>條列項目二</li>
+                                <li>條列項目三</li>
+                            </ul>
+                            <h2>第二段落</h2>
+                            <p>內文繼續寫。</p>
+                            <div class="notice warn">
+                                <span class="notice-icon">⚠️</span>
+                                <div>警告框，用來提醒容易搞錯的地方。</div>
+                            </div>
+                            <h2>表格範例</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>欄位一</th>
+                                        <th>欄位二</th>
+                                        <th>欄位三</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>資料</td>
+                                        <td>資料</td>
+                                        <td>資料</td>
+                                    </tr>
+                                    <tr>
+                                        <td>資料</td>
+                                        <td>資料</td>
+                                        <td>資料</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <hr/>
+                            <div class="notice danger">
+                                <span class="notice-icon">🚫</span>
+                                <div>紅色警告框，用來提醒絕對不能做的事。</div>
+                            </div>
+                        </div>
+                        <!-- 文章底部 -->
+                        <div class="article-footer">
+                            <div class="article-footer-title">繼續瀏覽</div>
+                            <div class="article-footer-links">
+                                <a class="primary-btn" href="../beginner.html">← 回到新手入門</a>
+                                <a href="../index.html">回到首頁</a>
+                            </div>
+                        </div>
+                        <div class="footer-note">星河夢境新手教學指南</div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
