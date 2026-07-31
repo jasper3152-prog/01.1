@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta http-equiv="refresh" content="0; url=404.html"/>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>生活模板｜星河夢境新手教學指南</title>
+        <meta name="description" content="星河夢境新手教學指南生活共用模板。"/>
+        <style>
+    :root {
+      --bg: #eef1f5;
+      --bg-page: #f7f8fa;
+      --panel: #ffffff;
+      --panel-soft: #f7f9fb;
+      --panel-head: #e8edf4;
+      --line: #cfd7e2;
+      --line-strong: #bac5d3;
+      --text: #1f2328;
+      --text-soft: #4f5b6a;
+      --muted: #7c8796;
+      --primary: #2e3a49;
+      --primary-2: #445268;
+      --shadow: 0 2px 8px rgba(31, 35, 40, 0.06);
+      --max-width: 1440px;
+      --sidebar-width: 260px;
+      --font: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary-2);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .site-shell {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: var(--sidebar-width) 1fr;
+      min-height: 100vh;
+      background: var(--bg-page);
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 16px 14px 24px;
+      border-right: 1px solid var(--line);
+      background: #f2f5f9;
+    }
+
+    .wiki-logo {
+      margin-bottom: 14px;
+      padding: 14px 14px 16px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .wiki-logo small {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .wiki-logo h1 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.2;
+      color: var(--primary);
+    }
+
+    .wiki-logo p {
+      margin: 8px 0 0;
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    .side-box {
+      margin-bottom: 12px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .side-box h3 {
+      margin: 0;
+      padding: 9px 12px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      background: var(--panel-head);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .side-box .box-body {
+      padding: 10px 12px;
+    }
+
+    .side-nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 6px;
+    }
+
+    .side-nav a {
+      display: block;
+      padding: 4px 0;
+      font-size: 14px;
+      color: var(--text-soft);
+    }
+
+    .side-nav a.active,
+    .side-nav a:hover {
+      color: var(--primary);
+    }
+
+    .content {
+      min-width: 0;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 10px 16px;
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-title {
+      font-size: 14px;
+      color: var(--text-soft);
+    }
+
+    .page-wrap {
+      padding: 18px;
+    }
+
+    .page-title-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .life-image-box {
+      border: 1px solid var(--line);
+      background: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      width: auto;
+      height: auto;
+      flex: 0 0 auto;
+    }
+
+    .life-image-box img {
+      display: block;
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+    }
+
+    .page-title-area h1 {
+      margin: 0 0 6px;
+      font-size: 30px;
+      line-height: 1.2;
+      color: var(--primary);
+    }
+
+    .page-title-area .sub-info {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    .page-title-area .summary {
+      margin: 0;
+      color: var(--text-soft);
+      font-size: 14px;
+    }
+
+    .wiki-panel {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      margin-bottom: 18px;
+    }
+
+    .wiki-panel h2 {
+      margin: 0;
+      padding: 10px 12px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary);
+      background: var(--panel-head);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .panel-body {
+      padding: 14px;
+    }
+
+    .placeholder-box {
+      min-height: 90px;
+      padding: 12px;
+      border: 1px dashed var(--line-strong);
+      background: #fcfdff;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .level-section {
+      border: 1px solid var(--line);
+      background: #fff;
+      margin-bottom: 16px;
+    }
+
+    .level-head {
+      padding: 10px 12px;
+      background: var(--panel-head);
+      border-bottom: 1px solid var(--line);
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 14px;
+    }
+
+    .level-body {
+      padding: 12px;
+    }
+
+    .level-grid {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .level-image-box {
+      border: 1px solid var(--line);
+      background: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 90px;
+      height: 90px;
+      padding: 4px;
+    }
+
+    .level-image-box img {
+      display: block;
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+    }
+
+    .level-text {
+      display: grid;
+      gap: 10px;
+    }
+
+    .level-desc {
+      padding: 10px 12px;
+      border: 1px dashed var(--line-strong);
+      background: #fcfdff;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .level-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text-soft);
+      font-size: 14px;
+    }
+
+    .level-list li + li {
+      margin-top: 6px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 1120px) {
+      .site-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        display: none;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page-wrap {
+        padding: 14px;
+      }
+
+      .page-title-area h1 {
+        font-size: 24px;
+      }
+
+      .page-title-block {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .level-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .level-image-box {
+        width: 90px;
+      }
+    }
+  </style>
+    </head>
+    <body>
+        <div class="site-shell">
+            <aside class="sidebar">
+                <div class="wiki-logo">
+                    <small>Wiki Guide</small>
+                    <h1>星河夢境新手教學指南</h1>
+                    <p>生活共用模板。</p>
+                </div>
+                <section class="side-box">
+                    <h3>頁面導覽</h3>
+                    <div class="box-body">
+                        <ul class="side-nav">
+                            <li>
+                                <a href="../index.html">首頁</a>
+                            </li>
+                            <li>
+                                <a href="../life.html">生活列表</a>
+                            </li>
+                            <li>
+                                <a class="active" href="#">目前生活頁</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </aside>
+            <main class="content">
+                <header class="topbar">
+                    <div class="topbar-title">生活 / Life Template</div>
+                </header>
+                <div class="page-wrap">
+                    <div class="page-title-block">
+                        <div class="life-image-box">
+                            <img src="../assets/images/life/example.png" alt="生活圖片">
+                        </div>
+                        <div class="page-title-area">
+                            <h1>生活名稱</h1>
+                            <p class="sub-info">分類 / 類型預留</p>
+                            <p class="summary">
+              這裡放生活簡介。之後你只要修改這段文字即可。 </p>
+                        </div>
+                    </div>
+                    <section class="wiki-panel">
+                        <h2>取得物</h2>
+                        <div class="panel-body">
+                            <div class="placeholder-box">
+                                這裡放可取得的素材、道具、資源。
+</div>
+                        </div>
+                    </section>
+                    <div class="two-col">
+                        <section class="wiki-panel">
+                            <h2>用途</h2>
+                            <div class="panel-body">
+                                <div class="placeholder-box">
+                                    這裡放用途。
+</div>
+                            </div>
+                        </section>
+                        <section class="wiki-panel">
+                            <h2>需求 / 條件</h2>
+                            <div class="panel-body">
+                                <div class="placeholder-box">
+                                    這裡放等級、工具、條件。
+</div>
+                            </div>
+                        </section>
+                    </div>
+                    <section class="wiki-panel">
+                        <h2>等級進度</h2>
+                        <div class="panel-body">
+                            <div class="level-section">
+                                <div class="level-head">12 等</div>
+                                <div class="level-body">
+                                    <div class="level-grid">
+                                        <div class="level-image-box">
+                                            <img src="../assets/images/life/example-12.png" alt="12 等圖片">
+                                        </div>
+                                        <div class="level-text">
+                                            <div class="level-desc">這裡放 12 等的文字說明。</div>
+                                            <ul class="level-list">
+                                                <li>預留條目</li>
+                                                <li>預留條目</li>
+                                                <li>預留條目</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="level-section">
+                                <div class="level-head">24 等</div>
+                                <div class="level-body">
+                                    <div class="level-grid">
+                                        <div class="level-image-box">
+                                            <img src="../assets/images/life/example-24.png" alt="24 等圖片">
+                                        </div>
+                                        <div class="level-text">
+                                            <div class="level-desc">這裡放 24 等的文字說明。</div>
+                                            <ul class="level-list">
+                                                <li>預留條目</li>
+                                                <li>預留條目</li>
+                                                <li>預留條目</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="level-section">
+                                <div class="level-head">36 等</div>
+                                <div class="level-body">
+                                    <div class="level-grid">
+                                        <div class="level-image-box">
+                                            <img src="../assets/images/life/example-36.png" alt="36 等圖片">
+                                        </div>
+                                        <div class="level-text">
+                                            <div class="level-desc">這裡放 36 等的文字說明。</div>
+                                            <ul class="level-list">
+                                                <li>預留條目</li>
+                                                <li>預留條目</li>
+                                                <li>預留條目</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="level-section">
+                                <div class="level-head">48 等</div>
+                                <div class="level-body">
+                                    <div class="level-grid">
+                                        <div class="level-image-box">
+                                            <img src="../assets/images/life/example-48.png" alt="48 等圖片">
+                                        </div>
+                                        <div class="level-text">
+                                            <div class="level-desc">這裡放 48 等的文字說明。</div>
+                                            <ul class="level-list">
+                                                <li>預留條目</li>
+                                                <li>預留條目</li>
+                                                <li>預留條目</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="level-section">
+                                <div class="level-head">60 等</div>
+                                <div class="level-body">
+                                    <div class="level-grid">
+                                        <div class="level-image-box">
+                                            <img src="../assets/images/life/example-60.png" alt="60 等圖片">
+                                        </div>
+                                        <div class="level-text">
+                                            <div class="level-desc">這裡放 60 等的文字說明。</div>
+                                            <ul class="level-list">
+                                                <li>預留條目</li>
+                                                <li>預留條目</li>
+                                                <li>預留條目</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="wiki-panel">
+                        <h2>推薦方式</h2>
+                        <div class="panel-body">
+                            <div class="placeholder-box">
+                                這裡放推薦方式。
+</div>
+                        </div>
+                    </section>
+                    <section class="wiki-panel">
+                        <h2>相關條目</h2>
+                        <div class="panel-body">
+                            <div class="placeholder-box">
+                                這裡放相關條目。
+</div>
+                        </div>
+                    </section>
+                    <section class="wiki-panel">
+                        <h2>備註</h2>
+                        <div class="panel-body">
+                            <div class="placeholder-box">
+                                這裡放補充說明。
+</div>
+                        </div>
+                    </section>
+                    <a class="back-link" href="../life.html">← 返回生活列表</a>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

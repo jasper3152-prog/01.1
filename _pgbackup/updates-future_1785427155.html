@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>未來更新｜星河夢境新手教學指南</title>
+        <link rel="stylesheet" href="assets/css/wiki.css"/>
+        <style>
+.future-tab-bar {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--line);
+  margin-bottom: 20px;
+}
+.future-tab-btn {
+  padding: 9px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-soft);
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  margin-bottom: -2px;
+  transition: 0.15s;
+}
+.future-tab-btn:hover { color: var(--primary); }
+.future-tab-btn.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary-2);
+}
+.future-panel { display: none; }
+.future-panel.active { display: block; }
+</style>
+    </head>
+    <body>
+        <div class="site-shell">
+            <aside class="sidebar">
+                <div class="wiki-logo">
+                    <small>Wiki Guide</small>
+                    <h1>星河夢境新手教學指南</h1>
+                    <p>未來更新計畫頁。</p>
+                </div>
+                <section class="side-box">
+                    <h3>分類導覽</h3>
+                    <div class="box-body">
+                        <ul class="side-nav">
+                            <li>
+                                <a href="index.html">首頁</a>
+                            </li>
+                            <li>
+                                <a href="jobs.html">職業</a>
+                            </li>
+                            <li>
+                                <a href="boss.html">Boss</a>
+                            </li>
+                            <li>
+                                <a href="life.html">生活</a>
+                            </li>
+                            <li>
+                                <a href="equipment.html">裝備</a>
+                            </li>
+                            <li>
+                                <a href="monster.html">怪物</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="side-box">
+                    <h3>站點工具</h3>
+                    <div class="box-body">
+                        <ul class="side-nav">
+                            <li>
+                                <a href="updates.html">更新日誌</a>
+                            </li>
+                            <li>
+                                <a class="active" href="updates-future.html">未來更新</a>
+                            </li>
+                            <li>
+                                <a href="templates.html">模板總覽</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">常見問題</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </aside>
+            <main class="content">
+                <header class="topbar">
+                    <div class="topbar-left">
+                        <div class="topbar-title">維護區 / 未來更新</div>
+                    </div>
+                </header>
+                <div class="page-wrap">
+                    <h1 class="page-title">未來更新</h1>
+                    <p class="page-subtitle">目前規劃中、尚未完成的條目與內容</p>
+                    <!-- 分頁切換 -->
+                    <div class="future-tab-bar">
+                        <button class="future-tab-btn active" onclick="switchFuture('feature', this)">功能更新</button>
+                        <button class="future-tab-btn" onclick="switchFuture('pending', this)">待補充</button>
+                    </div>
+                    <!-- 功能更新 -->
+                    <div id="future-feature" class="future-panel active">
+                        <section class="wiki-panel" style="margin-bottom:16px;">
+                            <div id="future-feature" class="future-panel active">
+                                <section class="wiki-panel" style="margin-bottom:16px;">
+                                    <h2></h2>
+                                    <div class="panel-body" style="padding:0;">
+                                        <table class="list-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>公告內容</th>
+                                                    <th>日期</th>
+                                                    <th>備註</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- 新增公告只需要複製下面這一列 -->
+                                                <tr>
+                                                    <td>未來新增模擬裝備配置數值計算工具</td>
+                                                    <td>2025-07-31</td>
+                                                    <td>資料不足</td>
+                                                </tr>
+                                                <!-- 範例結束 -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </section>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- 待補充 -->
+                    <div id="future-pending" class="future-panel">
+                        <!-- 職業 -->
+                        <section class="wiki-panel" style="margin-bottom:16px;">
+                            <h2>職業條目頁（待新增）</h2>
+                            <div class="panel-body" style="padding:0;">
+                                <table class="list-table">
+                                    <thead>
+                                        <tr>
+                                            <th>條目名稱</th>
+                                            <th>狀態</th>
+                                            <th>備註</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>戰士 Warrior</td>
+                                            <td>待新增</td>
+                                            <td>jobs/warrior.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>遊俠 Ranger</td>
+                                            <td>待新增</td>
+                                            <td>jobs/ranger.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>法師 Mage</td>
+                                            <td>待新增</td>
+                                            <td>jobs/mage.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>刺客 Assassin</td>
+                                            <td>待新增</td>
+                                            <td>jobs/assassin.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>蜘蛛 Spider</td>
+                                            <td>待新增</td>
+                                            <td>jobs/spider.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>貴族 Noble</td>
+                                            <td>待新增</td>
+                                            <td>jobs/noble.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>薩滿 Shaman</td>
+                                            <td>待新增</td>
+                                            <td>jobs/shaman.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>槍術 Lancer</td>
+                                            <td>待新增</td>
+                                            <td>jobs/lancer.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>僧侶 Monk</td>
+                                            <td>待新增</td>
+                                            <td>jobs/monk.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>死靈 Necromancer</td>
+                                            <td>待新增</td>
+                                            <td>jobs/necromancer.html</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <!-- Boss -->
+                        <section class="wiki-panel" style="margin-bottom:16px;">
+                            <h2>Boss 條目頁（待新增）</h2>
+                            <div class="panel-body" style="padding:0;">
+                                <table class="list-table">
+                                    <thead>
+                                        <tr>
+                                            <th>條目名稱</th>
+                                            <th>狀態</th>
+                                            <th>備註</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>潮汐領主</td>
+                                            <td>待新增</td>
+                                            <td>boss/tide-lord.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>黑牙</td>
+                                            <td>待新增</td>
+                                            <td>boss/blackfang.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>堡壘守衛隊長</td>
+                                            <td>待新增</td>
+                                            <td>boss/fortress-captain.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>靈魂守護者</td>
+                                            <td>待新增</td>
+                                            <td>boss/soul-guardian.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>詭礦領主</td>
+                                            <td>待新增</td>
+                                            <td>boss/ore-lord.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>焰影港主</td>
+                                            <td>待新增</td>
+                                            <td>boss/flameshadow-harbor-lord.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>幽靈船長</td>
+                                            <td>待新增</td>
+                                            <td>boss/ghost-captain.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>墮落領主</td>
+                                            <td>待新增</td>
+                                            <td>boss/fallen-lord.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>鎮魔守衛</td>
+                                            <td>待新增</td>
+                                            <td>boss/demon-warder.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>雷奧尼斯</td>
+                                            <td>待新增</td>
+                                            <td>boss/leonis.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>安格羅斯</td>
+                                            <td>待新增</td>
+                                            <td>boss/angros.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>卡洛恩</td>
+                                            <td>待新增</td>
+                                            <td>boss/karon.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>索恩</td>
+                                            <td>待新增</td>
+                                            <td>boss/thorne.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>納奧斯</td>
+                                            <td>待新增</td>
+                                            <td>boss/onas.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>伊索利亞</td>
+                                            <td>待新增</td>
+                                            <td>boss/thesoria.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>哈洛德</td>
+                                            <td>待新增</td>
+                                            <td>boss/harold.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>卡羅尼斯</td>
+                                            <td>待新增</td>
+                                            <td>boss/karonis.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>巴羅古斯</td>
+                                            <td>待新增</td>
+                                            <td>boss/barogus.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>阿爾瑪迪斯</td>
+                                            <td>待新增</td>
+                                            <td>boss/armadis.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>阿圖羅斯</td>
+                                            <td>待新增</td>
+                                            <td>boss/arturos.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>卡洛汀</td>
+                                            <td>待新增</td>
+                                            <td>boss/karotin.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>寒霜巨像</td>
+                                            <td>待新增</td>
+                                            <td>boss/frost-colossus.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>被遺忘的守護者</td>
+                                            <td>待新增</td>
+                                            <td>boss/forgotten-guardian.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>嗅探獸</td>
+                                            <td>待新增</td>
+                                            <td>boss/sniffer-beast.html</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <!-- 裝備 -->
+                        <section class="wiki-panel" style="margin-bottom:16px;">
+                            <h2>裝備條目頁（待新增）</h2>
+                            <div class="panel-body" style="padding:0;">
+                                <table class="list-table">
+                                    <thead>
+                                        <tr>
+                                            <th>條目名稱</th>
+                                            <th>狀態</th>
+                                            <th>備註</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>奧克拉斯的海洋戒指</td>
+                                            <td>待新增</td>
+                                            <td>equipment/oklas-ocean-ring.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>潮痕疾掠之鏈</td>
+                                            <td>待新增</td>
+                                            <td>equipment/tidetrace-chain.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>遠古大海祝福釣竿</td>
+                                            <td>待新增</td>
+                                            <td>equipment/ancient-sea-rod.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>寒霜冰紋之手套</td>
+                                            <td>待新增</td>
+                                            <td>equipment/frostmark-gloves.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>堡壘守護者的鐵甲</td>
+                                            <td>待新增</td>
+                                            <td>equipment/fortress-armor.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>守護者的遺忘法杖</td>
+                                            <td>待新增</td>
+                                            <td>equipment/forgotten-staff.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>沉睡的嗅探獸帽子</td>
+                                            <td>待新增</td>
+                                            <td>equipment/sleeper-beast-hat.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>幽靈之火-幽靈之背飾</td>
+                                            <td>待新增</td>
+                                            <td>equipment/ghostfire-backpiece.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>奧客塔維亞的短弓</td>
+                                            <td>待新增</td>
+                                            <td>equipment/octavia-shortbow.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>威爾斯的烈焰法杖</td>
+                                            <td>待新增</td>
+                                            <td>equipment/wills-flame-staff.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>史丹提拉斯的鋼鐵長劍</td>
+                                            <td>待新增</td>
+                                            <td>equipment/standiras-steel-sword.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>安格羅斯的穩重之靴</td>
+                                            <td>待新增</td>
+                                            <td>equipment/angros-steady-boots.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>海洋之心-海豚的元素之力</td>
+                                            <td>待新增</td>
+                                            <td>equipment/oceanheart-element.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>海洋之心-海豚的釣竿</td>
+                                            <td>待新增</td>
+                                            <td>equipment/dolphin-rod.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>戰傷之掠奪獸長槍</td>
+                                            <td>待新增</td>
+                                            <td>equipment/warwound-lance.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>黑脈戒指</td>
+                                            <td>待新增</td>
+                                            <td>equipment/black-vein-ring.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>煉銅術士手鐲</td>
+                                            <td>待新增</td>
+                                            <td>equipment/copper-caster-bracelet.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>鋼鐵之心</td>
+                                            <td>待新增</td>
+                                            <td>equipment/steelheart.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>橡木手鐲</td>
+                                            <td>待新增</td>
+                                            <td>equipment/oak-bracelet.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>魔法師的純白之手</td>
+                                            <td>待新增</td>
+                                            <td>equipment/pure-white-hand.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>極凍的寒冰元素之力</td>
+                                            <td>待新增</td>
+                                            <td>equipment/frozen-ice-element.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>破爛衣服</td>
+                                            <td>待新增</td>
+                                            <td>equipment/ragged-clothes.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>蒼天垂象之石</td>
+                                            <td>待新增</td>
+                                            <td>equipment/sky-omen-stone.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>萬物化生之珀</td>
+                                            <td>待新增</td>
+                                            <td>equipment/amber-of-life.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>血與淚之披風</td>
+                                            <td>待新增</td>
+                                            <td>equipment/blood-and-tears-cloak.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>遠眺銀河的夢境之心</td>
+                                            <td>待新增</td>
+                                            <td>equipment/dreamheart-of-galaxy.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>邪靈術士的魔法之手</td>
+                                            <td>待新增</td>
+                                            <td>equipment/dark-caster-hand.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>狂野怒熊之手</td>
+                                            <td>待新增</td>
+                                            <td>equipment/wild-bear-hand.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>極致的命運紅玉腰帶</td>
+                                            <td>待新增</td>
+                                            <td>equipment/ruby-fate-belt.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>鴨羽的穿心箭袋</td>
+                                            <td>待新增</td>
+                                            <td>equipment/duckfeather-quiver.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>金沙沿岸之心</td>
+                                            <td>待新增</td>
+                                            <td>equipment/golden-coast-heart.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>盜賊的野心-奔馳疾走</td>
+                                            <td>待新增</td>
+                                            <td>equipment/thiefs-ambition.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>安祥者的靈魂之劍</td>
+                                            <td>待新增</td>
+                                            <td>equipment/soul-sword.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>一板一眼</td>
+                                            <td>待新增</td>
+                                            <td>equipment/rigid-edge.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>水手的影焰手套</td>
+                                            <td>待新增</td>
+                                            <td>equipment/sailor-shadow-gloves.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>海盜的影焰長弓</td>
+                                            <td>待新增</td>
+                                            <td>equipment/pirate-shadow-bow.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>混沌蛛織者的繭刃</td>
+                                            <td>待新增</td>
+                                            <td>equipment/chaos-cocoon-blade.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>殘破的生靈之息</td>
+                                            <td>待新增</td>
+                                            <td>equipment/broken-life-breath.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>變異的石像之心</td>
+                                            <td>待新增</td>
+                                            <td>equipment/mutant-golem-heart.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>輝煌的光芒綻放頭盔</td>
+                                            <td>待新增</td>
+                                            <td>equipment/radiant-helm.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>侍僧的狂熱者護腿</td>
+                                            <td>待新增</td>
+                                            <td>equipment/acolyte-greaves.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>風能傳承之戒</td>
+                                            <td>待新增</td>
+                                            <td>equipment/wind-legacy-ring.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>淨化的聖光珠寶</td>
+                                            <td>待新增</td>
+                                            <td>equipment/holy-light-jewel.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>腐蝕之毒詛咒項鍊</td>
+                                            <td>待新增</td>
+                                            <td>equipment/corrosion-curse-necklace.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>世界渴求的理想鄉-創空魔劍</td>
+                                            <td>待新增</td>
+                                            <td>equipment/world-ideal-void-sword.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>拾夢者-餘者的啟蒙元素之力</td>
+                                            <td>待新增</td>
+                                            <td>equipment/dreamcatcher-element.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>銀河的起源。夢境者之心</td>
+                                            <td>待新增</td>
+                                            <td>equipment/galaxy-origin-heart.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>玄虛無極之曜</td>
+                                            <td>待新增</td>
+                                            <td>equipment/void-radiance.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>鴻蒙始原之髓</td>
+                                            <td>待新增</td>
+                                            <td>equipment/primordial-essence.html</td>
+                                        </tr>
+                                        <tr>
+                                            <td>厚德載物之玉</td>
+                                            <td>待新增</td>
+                                            <td>equipment/virtue-jade.html</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <!-- 其他待補充 -->
+                        <section class="wiki-panel" style="margin-bottom:20px;">
+                            <h2>其他待補充項目</h2>
+                            <div class="panel-body" style="padding:0;">
+                                <table class="list-table">
+                                    <thead>
+                                        <tr>
+                                            <th>項目</th>
+                                            <th>狀態</th>
+                                            <th>備註</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>副本怪物資料</td>
+                                            <td>待補充</td>
+                                            <td>副本怪物名稱與數值尚未填入</td>
+                                        </tr>
+                                        <tr>
+                                            <td>生活技能圖片</td>
+                                            <td>待上傳</td>
+                                            <td>各階段素材圖片尚未放入</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Boss 圖片</td>
+                                            <td>待上傳</td>
+                                            <td>各 Boss 圖片尚未放入</td>
+                                        </tr>
+                                        <tr>
+                                            <td>怪物圖片</td>
+                                            <td>待上傳</td>
+                                            <td>各怪物圖片尚未放入</td>
+                                        </tr>
+                                        <tr>
+                                            <td>裝備圖片</td>
+                                            <td>待上傳</td>
+                                            <td>各裝備圖片尚未放入</td>
+                                        </tr>
+                                        <tr>
+                                            <td>職業技能說明</td>
+                                            <td>待補充</td>
+                                            <td>各職業技能內容尚未填入</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Boss 掉落數值</td>
+                                            <td>待補充</td>
+                                            <td>各 Boss 血量、攻擊力等數值預留</td>
+                                        </tr>
+                                        <tr>
+                                            <td>怪物攻擊力與掉落物</td>
+                                            <td>待補充</td>
+                                            <td>LV1–60 全部怪物數值尚未填入</td>
+                                        </tr>
+                                        <tr>
+                                            <td>裝備效果說明</td>
+                                            <td>待補充</td>
+                                            <td>各裝備詳細效果數值尚未填入</td>
+                                        </tr>
+                                        <tr>
+                                            <td>生活技能描述</td>
+                                            <td>待補充</td>
+                                            <td>各生活技能說明文字尚未填入</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                    <a class="back-link" href="index.html">← 返回首頁</a>
+                    <div class="footer-note">星河夢境新手教學指南</div>
+                </div>
+            </main>
+        </div>
+        <script>
+function switchFuture(tab, btn) {
+  document.querySelectorAll(".future-panel").forEach(p => p.classList.remove("active"));
+  document.querySelectorAll(".future-tab-btn").forEach(b => b.classList.remove("active"));
+  document.getElementById("future-" + tab).classList.add("active");
+  btn.classList.add("active");
+}
+</script>
+    </body>
+</html>
