@@ -3,78 +3,9 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>找不到頁面｜星河攻略資訊站</title>
+        <title>找不到頁面｜星河夢境資訊站</title>
         <link rel="stylesheet" href="assets/css/wiki.css"/>
-        <style>
-.error-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 60vh;
-  text-align: center;
-  padding: 40px 20px;
-}
-.error-code {
-  font-size: 96px;
-  font-weight: 900;
-  color: #d1d9e0;
-  line-height: 1;
-  margin-bottom: 8px;
-  letter-spacing: -4px;
-}
-.error-title {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 12px;
-}
-.error-desc {
-  font-size: 14px;
-  color: var(--text-soft);
-  margin-bottom: 32px;
-  max-width: 400px;
-  line-height: 1.8;
-}
-.error-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-.error-links a {
-  padding: 8px 18px;
-  border: 1px solid var(--line);
-  background: var(--panel);
-  color: var(--primary);
-  font-size: 14px;
-  transition: 0.15s;
-}
-.error-links a:hover {
-  background: #edf2f7;
-  text-decoration: none;
-  border-color: var(--line-strong);
-}
-.error-links a.primary-btn {
-  background: var(--primary);
-  color: #fff;
-  border-color: var(--primary);
-}
-.error-links a.primary-btn:hover {
-  background: var(--primary-2);
-  border-color: var(--primary-2);
-}
-.error-search-wrap {
-  width: 100%;
-  max-width: 420px;
-}
-.error-search-label {
-  font-size: 13px;
-  color: var(--muted);
-  margin-bottom: 8px;
-}
-</style>
+        <style>.error-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; text-align: center; padding: 40px 20px; } .error-code { font-size: 96px; font-weight: 900; color: #d1d9e0; line-height: 1; margin-bottom: 8px; letter-spacing: -4px; } .error-title { font-size: 22px; font-weight: 700; color: var(--primary); margin-bottom: 12px; } .error-desc { font-size: 14px; color: var(--text-soft); margin-bottom: 32px; max-width: 400px; line-height: 1.8; } .error-links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 40px; } .error-links a { padding: 8px 18px; border: 1px solid var(--line); background: var(--panel); color: var(--primary); font-size: 14px; transition: 0.15s; } .error-links a:hover { background: #edf2f7; text-decoration: none; border-color: var(--line-strong); } .error-links a.primary-btn { background: var(--primary); color: #fff; border-color: var(--primary); } .error-links a.primary-btn:hover { background: var(--primary-2); border-color: var(--primary-2); } .error-search-wrap { width: 100%; max-width: 420px; } .error-search-wrap .search-box { border: 1px solid var(--line); border-radius: 6px; background: var(--panel); } .error-search-label { font-size: 13px; color: var(--muted); margin-bottom: 8px; }</style>
     </head>
     <body>
         <div class="site-shell">
@@ -82,7 +13,7 @@
                 <div class="wiki-logo">
                     <small>Wiki Guide</small>
                     <h1>星河攻略資訊站</h1>
-                    <p>找不到頁面。</p>
+                    <p>星河夢境攻略資訊站。</p>
                 </div>
                 <section class="side-box">
                     <h3>分類導覽</h3>
@@ -136,7 +67,7 @@
           可以試試搜尋，或從下方直接跳到你要的分類。 </p>
                         <div class="error-search-wrap">
                             <div class="error-search-label">試試搜尋看看</div>
-                            <div class="search-box" style="margin-bottom:24px;border:1px solid var(--line);border-radius:6px;background:var(--panel);">
+                            <div class="search-box" style="margin-bottom:24px;">
                                 <span>🔎</span>
                                 <input id="inlineSearchInput" type="text" placeholder="輸入職業、Boss、裝備名稱..."/>
                             </div>
@@ -151,13 +82,17 @@
                             <a href="monster.html">怪物</a>
                         </div>
                     </div>
-                    <div class="footer-note">星河攻略資訊站</div>
+                    <div class="footer-note">星河夢境新手教學指南</div>
                 </div>
             </main>
         </div>
         <script src="assets/js/search-data.js"></script>
         <script src="assets/js/search.js"></script>
         <script>
+// 頂部搜尋列（topbar）
+// search.js 已處理 globalSearchInput，不需要重複
+
+// 頁面中間的內嵌搜尋
 const inlineInput = document.getElementById("inlineSearchInput");
 const inlineResults = document.getElementById("inlineSearchResults");
 
